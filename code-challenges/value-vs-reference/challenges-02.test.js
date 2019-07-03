@@ -10,7 +10,7 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 //https://www.w3schools.com/jsref/jsref_concat_string.asp
 const appendTheEnd = (str) => {
   // Solution code here...  
-  let appendedStr = str.concat(' the end');
+  let appendedStr = str.concat(' The end.');
   return appendedStr;
 
 };
@@ -69,7 +69,10 @@ console.log(people[1].isAuthor) prints true
 
 const setStatusAsAuthor = (people) => {
   // Solution code here...
-  people.isAuthor[i] = true;
+  people.forEach(person =>{
+    person.isAuthor = true;
+  });
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -89,6 +92,9 @@ console.log(a) prints [1, 2, 3, 4]
 
 const append = (arr1, arr2) => {
   // Solution code here...
+  arr2.forEach((value) =>{
+    arr1.push(value);
+  });
 
 };
 
@@ -103,7 +109,7 @@ Run your tests from the console: jest challenges-02.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('It should append without modifying the oiginal', () => {
     const a = 'This is my story.';
     const b = appendTheEnd(a);
@@ -113,7 +119,7 @@ xdescribe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should append by modifying the oiginal', () => {
     const a = ['Yes', 'it', 'is'];
     appendFirstToLast(a);
@@ -122,7 +128,7 @@ xdescribe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should add a property to an object', () => {
     const a = { fullName: 'Octavia Butler' };
     addBirthYearProperty(a, 1947);
@@ -142,7 +148,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should append the second array to the first', () => {
     const a = [1, 2, 3, 4];
     const b = [5, 6, 7, 8];
