@@ -1,6 +1,7 @@
 # data-structures-and-algorithms
 
 resources:
+
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 https://www.freecodecamp.org/news/reduce-f47a7da511a9/
