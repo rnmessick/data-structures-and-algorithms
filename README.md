@@ -2,6 +2,12 @@
 
 resources:
 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every 
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+
+https://stackoverflow.com/questions/16503844/split-an-array-of-strings-using-a-separator
+
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 https://www.freecodecamp.org/news/reduce-f47a7da511a9/
