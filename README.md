@@ -5,7 +5,7 @@
 Reverse an Array:
 
 Whiteboard:
-![Image of Whiteboard Reverse Array](https://github.com/rnmessick/data-structures-and-algorithms/tree/master/code401challenges/whiteboards)
+![Image of Whiteboard Reverse Array](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/code401challenges/whiteboards/reverseArrayWhiteboard.jpg)
 
 resources:
 https://www.baeldung.com/java-invert-array
