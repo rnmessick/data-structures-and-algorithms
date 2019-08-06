@@ -18,7 +18,7 @@ At first I tried to itterate over the entire array's length. This did not give t
 ## Resources:
 https://www.baeldung.com/java-invert-array
 
-##Collaborators: Steve Grant
+## Collaborators: Steve Grant
 
 ---
 
