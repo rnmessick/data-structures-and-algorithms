@@ -2,7 +2,11 @@
 
 resources:
 
+__JAVA__
 https://www.baeldung.com/java-invert-array
+
+******************************************************************************************************
+__JAVASCRIPT__
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every 
 
