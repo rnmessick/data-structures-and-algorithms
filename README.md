@@ -9,7 +9,7 @@ Reverse array "in place" without using any library shortcuts.
 Take in an array and reverse the elements of the array returning a changed array.
 
 ## Approach & Efficiency
-At first I tried to itterate over the entire array's length. This did not give the results I'd hoped for. I researched a bit until I found a blog that seemed to fit my needs and the parameters of the assignment. See resources.
+At first I tried to iterate over the entire array's length. This did not give the results I'd hoped for. I researched a bit until I found a blog that seemed to fit my needs and the parameters of the assignment. See resources.
 
 ## Solution
 
