@@ -1,12 +1,23 @@
 # data-structures-and-algorithms
 
-resources:
 
 __JAVA__
+
+Reverse an Array:
+
+Whiteboard:
+
+
+resources:
 https://www.baeldung.com/java-invert-array
+
+collaborator: Steve Grant
 
 ******************************************************************************************************
 __JAVASCRIPT__
+
+
+resources:
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every 
 
