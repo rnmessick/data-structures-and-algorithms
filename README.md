@@ -1,25 +1,24 @@
 # data-structures-and-algorithms
 
-
-__JAVA__
+**JAVA**
 
 Reverse an Array:
 
 Whiteboard:
-
+![Image of Whiteboard Reverse Array](./code401challenges/whiteboards)
 
 resources:
 https://www.baeldung.com/java-invert-array
 
 collaborator: Steve Grant
 
-******************************************************************************************************
-__JAVASCRIPT__
+---
 
+**JAVASCRIPT**
 
 resources:
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 
@@ -39,4 +38,3 @@ https://www.youtube.com/watch?v=0d76_2sksWY&feature=youtu.be
 https://stackoverflow.com/questions/34066752/sort-object-of-weekdays-like-sunday-monday-saturday
 
 Collaborators: Nicholas Paro, Marisha Hoza, Joachen Busch, Jack Kinne, BomiBear, Jane Hur, Steve Grant
-
