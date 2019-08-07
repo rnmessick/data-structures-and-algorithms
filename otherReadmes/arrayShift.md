@@ -18,6 +18,10 @@ Used edge cases to build out tests.
 
 ## Resources
 
+Junit Assert: https://junit.org/junit4/javadoc/latest/org/junit/Assert.html
+
+Math.ceil: https://www.geeksforgeeks.org/java-ceil-method-examples/
+
 ## Collaborators
 
 Padmapriya Ganapathi
