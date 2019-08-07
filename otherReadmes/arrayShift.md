@@ -18,8 +18,6 @@ Used edge cases to build out tests.
 
 ## Resources
 
-https://www.baeldung.com/java-invert-array
-
 ## Collaborators
 
 Padmapriya Ganapathi
