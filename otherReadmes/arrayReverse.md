@@ -12,6 +12,10 @@ At first I tried to iterate over the entire array's length. This did not give th
 
 ## Solution
 
+[Link to code](../code401challenges/src/main/java/code401challenges/ArrayReverse.java)
+
+[Link to tests](../code401challenges/src/test/java/code401challenges/ArrayReverseTest.java)
+
 ![Image of Whiteboard Reverse Array](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/arrayReverse.jpg)
 
 ## Resources

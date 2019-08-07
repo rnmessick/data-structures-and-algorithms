@@ -14,6 +14,10 @@ Used edge cases to build out tests.
 
 ## Solution
 
+[Link to code](../code401challenges/src/main/java/code401challenges/ArrayShift.java)
+
+[Link to tests](../code401challenges/src/test/java/code401challenges/ArrayShiftTest.java)
+
 ![Image of Whiteboard Shift Insert Array](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/arrayShiftInsert.jpg)
 
 ## Resources
