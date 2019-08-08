@@ -16,7 +16,7 @@ Using a while loop, find the midpoint and check if it matches key. If too low, m
 
 [Link to tests](../code401challenges/src/test/java/code401challenges/BinarySearchTest.java)
 
-![Image of Whiteboard Shift Insert Array](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/binarySearch.jpg)
+![Image of Whiteboard Shift Insert Array](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/binarySearch.JPG)
 
 ## Resources
 
