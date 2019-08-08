@@ -8,6 +8,8 @@
 
 - [Day 2: Shift and Insert an Array](./otherReadmes/arrayShift.md)
 
+- [Day 3: Binary Search](./otherReadmes/binarySearch.md)
+
 ## Code 301 Challenges
 
 - [Inside their directory](./301-code-challenges)
