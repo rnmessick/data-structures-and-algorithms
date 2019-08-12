@@ -10,6 +10,10 @@
 
 - [Day 3: Binary Search](./otherReadmes/binarySearch.md)
 
+## Week 2 Challenges
+
+- [Day 1: Linked List Implementation](./otherReadmes/linkedLists.md)
+
 ## Code 301 Challenges
 
 - [Inside their directory](./301-code-challenges)
