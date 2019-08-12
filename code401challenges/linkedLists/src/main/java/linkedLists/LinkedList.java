@@ -19,28 +19,7 @@ public class LinkedList {
         return length;
     }
 
-    static class Node {
-        String data;
-        Node next;
-
-        // Constructor to create a new node
-        // Next is by default initialized as null
-        Node(String d)
-        {
-            data = d;
-            next = null;
-        }
-
-        public Node getNext() {
-            return next;
-        }
-
-        public String getData() {
-            return data;
-        }
-    }
-
-    // Method to insert a new node
+   // Method to insert a new node
     public LinkedList Insert(LinkedList list, String data)
     {
         // Create a new node with given data
@@ -76,7 +55,27 @@ public class LinkedList {
             }
             current = current.getNext();
         }
-        return "List: " + result;
+         return "List: " + result;
+    }
+    static class Node {
+        String data;
+        Node next;
+
+        // Constructor to create a new node
+        // Next is by default initialized as null
+        Node(String d)
+        {
+            data = d;
+            next = null;
+        }
+
+        public Node getNext() {
+            return next;
+        }
+
+        public String getData() {
+            return data;
+        }
     }
 
 }

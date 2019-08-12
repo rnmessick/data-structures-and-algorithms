@@ -31,3 +31,5 @@ https://crunchify.com/how-to-implement-a-linkedlist-class-from-scratch-in-java/
 https://www.geeksforgeeks.org/implementing-a-linked-list-in-java-using-class/
 
 https://javarevisited.blogspot.com/2015/02/simple-junit-example-unit-tests-for-linked-list-java.html
+
+https://stackoverflow.com/questions/19283083/printing-out-a-linked-list-using-tostring

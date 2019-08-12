@@ -31,9 +31,11 @@ public class AppTest {
     @Test
     public void testLinkedList_addMultipleNodes(){
         LinkedList newList = new LinkedList();
-        newList.Insert(newList,"Hi");
-        newList.Insert(newList,"There");
-        newList.Insert(newList,"Friend");
+        newList.Insert(newList,"A");
+        System.out.println("content should be A  " + newList);
+        newList.Insert(newList,"B");
+        newList.Insert(newList,"C");
+        System.out.println("content is  " + newList);
         assertEquals("Length should be 3 long", 3, newList.length());
         }
 
