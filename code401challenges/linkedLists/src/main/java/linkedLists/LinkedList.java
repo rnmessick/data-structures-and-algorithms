@@ -30,6 +30,14 @@ public class LinkedList {
             data = d;
             next = null;
         }
+
+        public Node getNext() {
+            return next;
+        }
+
+        public String getData() {
+            return data;
+        }
     }
 
     // Method to insert a new node
@@ -55,6 +63,20 @@ public class LinkedList {
 
         // return list by head
         return list;
+    }
+
+    // Method to stringify lists
+    public String toString() {
+        String result = "";
+        Node current = head;
+        while(current.getNext() != null){
+            result += current.getData();
+            if(current.getNext() != null){
+                result += ", ";
+            }
+            current = current.getNext();
+        }
+        return "List: " + result;
     }
 
 }

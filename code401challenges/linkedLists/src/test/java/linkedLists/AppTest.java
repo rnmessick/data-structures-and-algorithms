@@ -35,13 +35,18 @@ public class AppTest {
         newList.Insert(newList,"There");
         newList.Insert(newList,"Friend");
         assertEquals("Length should be 3 long", 3, newList.length());
+        }
 
-    }
+//    @Test
+//    public  void testLinkedList_returnsList(){
+//        String[] expected = {"Hi", "There", "Friend"};
+//        String[] actual = {"Hi", "There", "Friend"};
+//        assertArrayEquals("Should read Hi There Friend", expected, actual);
+//
+//    }
 
 
        /*
-
-
         Will return true when finding a value within the linked list that exists
         Will return false when searching for a value in the linked list that does not exist
         Can properly return a collection of all the values that exist in the linked list
