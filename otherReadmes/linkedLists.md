@@ -10,9 +10,13 @@ Implement a Singly Linked List Data Structure
 
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
-[Link to code](../code401challenges/src/main/java/code401challenges/linkedLists/LinkedLists.java)
+## Solution
 
-[Link to tests](../code401challenges/src/test/java/code401challenges/linkedLists/LinkedLists.java)
+![Image of Whiteboard Singly Linked Lists](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/linkedLists.JPG)
+
+[Link to code](../code401challenges/linkedLists/src/main/java/linkedLists/LinkedList.java)
+
+[Link to tests](../code401challenges/linkedLists/src/test/java/linkedLists/AppTest.java)
 
 ## API
 
