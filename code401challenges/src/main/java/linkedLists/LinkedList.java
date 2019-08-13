@@ -8,19 +8,16 @@ public class LinkedList<T> {
     }
 
     // Method to insert a new node
-    public LinkedList Insert(T value) {
-        LinkedList list = new LinkedList();
+    public void Insert(T value) {
         Node newNode = new Node(value, this.head);
         this.head = newNode;
 
-//        System.out.println(list);
-        return list;
     }
 
     //Append to end
     public void Append(T value) {
-        LinkedList list = new LinkedList();
         Node<T> newNode = new Node<>(value);
+        newNode.next = null;
         // base case
         if (head == null) {
             head = newNode;
@@ -31,9 +28,6 @@ public class LinkedList<T> {
             }
             last.next = newNode;
         }
-
-
-
 
     }
 
@@ -54,7 +48,7 @@ public class LinkedList<T> {
         return length() == 0;
     }
 
-    int length() {
+    public int length() {
         int length = 0;
         Node current = head;
 
@@ -81,7 +75,6 @@ public class LinkedList<T> {
 
     static class Node<T> {
         private T value;
-        String data;
         Node next;
 
         // Constructor to create a new node
@@ -89,6 +82,9 @@ public class LinkedList<T> {
         public Node(T value, Node next) {
             this.value = value;
             this.next = next;
+        }
+
+        public Node(T value) {
         }
 
         public void setNext(Node next) {
