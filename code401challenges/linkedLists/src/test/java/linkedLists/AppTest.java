@@ -12,7 +12,7 @@ public class AppTest {
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
     @Test
-    public void testNewEmptyLinkedList(){
+    public void testNewEmptyLinkedList() {
         LinkedList newList = new LinkedList();
         assertTrue("linked list should be empty", newList.isEmpty());
         assertEquals("Length should be zero",0, newList.length());
@@ -20,37 +20,53 @@ public class AppTest {
 
     // Can properly insert into the linked list
     @Test
-    public void testLinkedList_hasContent(){
+    public void testLinkedList_hasContent() {
         LinkedList newList = new LinkedList();
-        newList.Insert(newList,"Baldr is my doggo");
+        newList.Insert("Baldr is my doggo");
         assertFalse("linked list should have content", newList.isEmpty());
         assertEquals("Length should be 1 long",1, newList.length());
     }
 
     // Can properly insert multiple nodes into the linked list
     @Test
-    public void testLinkedList_addMultipleNodes(){
+    public void testLinkedList_addMultipleNodes() {
         LinkedList newList = new LinkedList();
-        newList.Insert(newList,"A");
-        System.out.println("content should be A  " + newList);
-        newList.Insert(newList,"B");
-        newList.Insert(newList,"C");
-        System.out.println("content is  " + newList);
+        newList.Insert("A");
+        newList.Insert("B");
+        newList.Insert("C");
         assertEquals("Length should be 3 long", 3, newList.length());
-        }
+    }
 
-//    @Test
-//    public  void testLinkedList_returnsList(){
-//        String[] expected = {"Hi", "There", "Friend"};
-//        String[] actual = {"Hi", "There", "Friend"};
-//        assertArrayEquals("Should read Hi There Friend", expected, actual);
-//
-//    }
+    //  Will return true when finding a value within the linked list that exist
+    @Test
+    public  void testLinkedList_IncludesTrue() {
+        LinkedList newList = new LinkedList();
+        newList.Insert("A");
+        newList.Insert("B");
 
+        assertEquals("The list should return true if the value exists in the list", true, newList.Includes("B"));
+    }
 
-       /*
-        Will return true when finding a value within the linked list that exists
-        Will return false when searching for a value in the linked list that does not exist
-        Can properly return a collection of all the values that exist in the linked list
-     */
-}
+    // Will return false when searching for a value in the linked list that does not exist
+    @Test
+    public void testLinkedList_IncludesFalse() {
+        LinkedList newList = new LinkedList();
+        newList.Insert("A");
+        newList.Insert("B");
+
+        assertEquals("The list should return false if the value does not exist in the list", false, newList.Includes("C"));
+    }
+
+    //Can properly return a collection of all the values that exist in the linked list
+    @Test
+    public void testLinkedList_printFullList() {
+        LinkedList<String> newList = new LinkedList();
+        newList.Insert("A");
+        newList.Insert("B");
+        newList.Insert("C");
+
+        assertEquals("List should print as Head, C, B, A", "List: HEAD->C->B->A->null", newList.toString());
+
+    }
+
+    }
