@@ -14,9 +14,9 @@ Implement a Singly Linked List Data Structure
 
 ![Image of Whiteboard Singly Linked Lists](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/linkedLists.JPG)
 
-[Link to code](../code401challenges/linkedLists/src/main/java/linkedLists/LinkedList.java)
+[Link to code](../code401challenges/src/main/java/linkedLists/LinkedList.java)
 
-[Link to tests](../code401challenges/linkedLists/src/test/java/linkedLists/AppTest.java)
+[Link to tests](../code401challenges/src/test/java/code401challenges/LinkedListTest.java)
 
 ## API
 
