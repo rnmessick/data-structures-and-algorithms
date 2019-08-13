@@ -28,6 +28,8 @@ Implement a Singly Linked List Data Structure
 
 **toString** which takes in no arguments and returns a string representing all the values in the Linked List.
 
+**Append** which adds a new node with the given value to the end of the list.
+
 ## Resources
 
 https://crunchify.com/how-to-implement-a-linkedlist-class-from-scratch-in-java/
@@ -37,3 +39,5 @@ https://www.geeksforgeeks.org/implementing-a-linked-list-in-java-using-class/
 https://javarevisited.blogspot.com/2015/02/simple-junit-example-unit-tests-for-linked-list-java.html
 
 https://stackoverflow.com/questions/19283083/printing-out-a-linked-list-using-tostring
+
+https://farenda.com/algorithms/linked-list-add-element-at-the-end/
