@@ -1,5 +1,8 @@
 package linkedLists;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LinkedList<T> {
     Node<T> head; // head of list
 
@@ -83,7 +86,26 @@ public class LinkedList<T> {
         }
         return false;
     }
+    // Write a method for the Linked List class which takes a number, k, as a parameter.
+    // Return the node’s value that is k from the end of the linked list.
+    public String kthFromEnd(T k) {
+        List<T> tempList = new ArrayList<>();
+        Node<T> current = this.head;
 
+        while(current != null) {
+            tempList.add(current.value);
+            int checkLength = tempList.size() - 1 - k;
+
+            if(checkLength < 0) {
+                return "Exception";
+            } else {
+                return tempList.get(checkLength);
+            }
+
+        }
+
+        return null;
+    }
     // to use in testing
     public boolean isEmpty() {
         return length() == 0;
