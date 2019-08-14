@@ -12,7 +12,7 @@
 
 ## Week 2 Challenges
 
-- [Day 1: Linked List Implementation](./otherReadmes/linkedLists.md)
+- [Day 1 & Day 2: Linked List Implementation](./otherReadmes/linkedLists.md)
 
 ## Code 301 Challenges
 
