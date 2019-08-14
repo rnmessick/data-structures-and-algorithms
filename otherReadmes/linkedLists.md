@@ -12,13 +12,13 @@ Implement a Singly Linked List Data Structure
 
 ## Solution
 
-![Image of Whiteboard: Append, InsertBefore, InsertAfter -Singly Linked Lists](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/linkedLists.JPG)
+![Image of Whiteboard: Append, InsertBefore, InsertAfter -Singly Linked Lists](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/linkedLists.jpg)
 
 [Link to code](../code401challenges/src/main/java/linkedLists/LinkedList.java)
 
 [Link to tests](../code401challenges/src/test/java/code401challenges/LinkedListTest.java)
 
-![Image of Whiteboard: k-th value from the end of a linked list. -Singly Linked Lists](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/linkedLists.JPG)
+
 
 ## API
 
@@ -33,6 +33,8 @@ Implement a Singly Linked List Data Structure
 **append** which adds a new node with the given value to the end of the list.
 
 **insertBefore** which adds a new node with the given newValue immediately before the first value node
+
+**insertAfter** which add a new node with the given newValue immediately after the first value node
 
 \*\*
 
