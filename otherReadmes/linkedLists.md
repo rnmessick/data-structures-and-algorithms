@@ -12,23 +12,29 @@ Implement a Singly Linked List Data Structure
 
 ## Solution
 
-![Image of Whiteboard Singly Linked Lists](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/linkedLists.JPG)
+![Image of Whiteboard: Append, InsertBefore, InsertAfter -Singly Linked Lists](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/linkedLists.JPG)
 
 [Link to code](../code401challenges/src/main/java/linkedLists/LinkedList.java)
 
 [Link to tests](../code401challenges/src/test/java/code401challenges/LinkedListTest.java)
 
+![Image of Whiteboard: k-th value from the end of a linked list. -Singly Linked Lists](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/linkedLists.JPG)
+
 ## API
 
 <!-- Description of each method publicly available to your Linked List -->
 
-**Insert** which takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
+**insert** which takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
 
-**Includes** which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
+**includes** which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
 
 **toString** which takes in no arguments and returns a string representing all the values in the Linked List.
 
-**Append** which adds a new node with the given value to the end of the list.
+**append** which adds a new node with the given value to the end of the list.
+
+**insertBefore** which adds a new node with the given newValue immediately before the first value node
+
+\*\*
 
 ## Resources
 
@@ -41,3 +47,5 @@ https://javarevisited.blogspot.com/2015/02/simple-junit-example-unit-tests-for-l
 https://stackoverflow.com/questions/19283083/printing-out-a-linked-list-using-tostring
 
 https://farenda.com/algorithms/linked-list-add-element-at-the-end/
+
+https://www.geeksforgeeks.org/linked-list-set-2-inserting-a-node/
