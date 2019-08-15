@@ -18,8 +18,6 @@ Implement a Singly Linked List Data Structure
 
 [Link to tests](../code401challenges/src/test/java/code401challenges/LinkedListTest.java)
 
-
-
 ## API
 
 <!-- Description of each method publicly available to your Linked List -->
@@ -36,6 +34,10 @@ Implement a Singly Linked List Data Structure
 
 **insertAfter** which add a new node with the given newValue immediately after the first value node
 
+**kthFromEnd** a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list.
+
+**mergedList** 
+
 \*\*
 
 ## Resources
@@ -51,3 +53,9 @@ https://stackoverflow.com/questions/19283083/printing-out-a-linked-list-using-to
 https://farenda.com/algorithms/linked-list-add-element-at-the-end/
 
 https://www.geeksforgeeks.org/linked-list-set-2-inserting-a-node/
+
+https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/
+
+https://www.techiedelight.com/merge-alternate-nodes-two-linked-lists/
+
+https://www.programcreek.com/2012/12/leetcode-merge-two-sorted-lists-java/

@@ -58,22 +58,23 @@ public class LinkedList<T> {
     public void insertAfter(T targetVal, T newValue) {
         Node<T> current = head;
 
-        if(current.value.equals(targetVal)) {
+        if (current.value.equals(targetVal)) {
             Node<T> newVal = new Node<>(newValue, current.next);
             current.next = newVal;
             return;
         }
-        while(true) {
-            if(current.value.equals(targetVal)) {
+        while (true) {
+            if (current.value.equals(targetVal)) {
                 break;
             } else {
                 current = current.next;
             }
         }
-        current.next = new Node<>(newValue,current.next);
+        current.next = new Node<>(newValue, current.next);
 
 
     }
+
     // Method to see if list contains a value
     public boolean includes(T value) {
         Node<T> current = this.head;
@@ -86,26 +87,48 @@ public class LinkedList<T> {
         }
         return false;
     }
+
     // Write a method for the Linked List class which takes a number, k, as a parameter.
     // Return the node’s value that is k from the end of the linked list.
-    public String kthFromEnd(T k) {
+    public String kthFromEnd(int k) {
         List<T> tempList = new ArrayList<>();
         Node<T> current = this.head;
 
-        while(current != null) {
-            tempList.add(current.value);
-            int checkLength = tempList.size() - 1 - k;
-
-            if(checkLength < 0) {
-                return "Exception";
-            } else {
-                return tempList.get(checkLength);
-            }
-
+        while (current != null) {
+            tempList.add(current.getData());
+            current = current.getNext();
+        }
+        int checkIndex = tempList.size() - 1 - k;
+        if (checkIndex < 0) {
+            return "Exception";
+        } else {
+            return tempList.get(checkIndex).toString();
         }
 
-        return null;
     }
+
+    public LinkedList<T> mergeLists(LinkedList<T> list1, LinkedList<T> list2) {
+        Node<T> current1 = list1.head;
+        Node<T> current2 = list2.head;
+
+        Node<T> next1;
+        Node<T> next2;
+
+        // here is the zipper
+        while (current1 != null && current2 != null) {
+            next1 = current1.getNext();
+            next2 = current2.getNext();
+
+            current1.setNext(current2);
+            current2.setNext(next1);
+
+            current1 = next1;
+            current2 = next2;
+        }
+        return list1;
+
+    }
+
     // to use in testing
     public boolean isEmpty() {
         return length() == 0;
@@ -136,30 +159,4 @@ public class LinkedList<T> {
         return "List: " + result;
     }
 
-//********Node Class********
-    static class Node<T> {
-        T value;
-        Node<T> next;
-
-        // Constructor to create a new node
-        // Next is by default initialized as null
-        public Node(T value, Node next) {
-            this.value = value;
-            this.next = next;
-        }
-
-        public void setNext(Node<T> next) {
-            this.next = next;
-
-        }
-
-        public Node<T> getNext() {
-            return this.next;
-        }
-
-        public T getData() {
-
-            return this.value;
-        }
-    }
 }

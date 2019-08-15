@@ -95,11 +95,56 @@ public class LinkedListTest {
         assertEquals("Insert D After B", "List: HEAD->C->B->D->A->null", newList.toString());
     }
 
-    /*Where k is greater than the length of the linked list
-    Where k and the length of the list are the same
+    @Test
+    public void testKthFromEnd_happyPath() {
+        LinkedList<String> newList = new LinkedList<>();
+        newList.insert("A");
+        newList.insert("B");
+        newList.insert("C");
+
+        assertEquals("Should return A and it is two from end", "C", newList.kthFromEnd(2));
+    }
+//    @Test
+//    public void testKthFromEnd_kSameLength() {
+//        LinkedList<String> newList = new LinkedList<>();
+//        newList.insert("A");
+//        newList.insert("B");
+//        newList.insert("C");
+//
+//        assertEquals ("k is same as length!", "Exception", newList.kthFromEnd(3));
+//    }
+
+//    @Test
+//    public void testKthFromEnd_kisNegative() {
+//        LinkedList<String> newList = new LinkedList<>();
+//        newList.insert("A");
+//        newList.insert("B");
+//        newList.insert("C");
+//
+//        assertEquals ("k is the same as length!", "Exception", newList.kthFromEnd(-1));
+//    }
+    /*
     Where k is not a positive integer
     Where the linked list is of a size 1
-    “Happy Path” where k is not at the end, but somewhere in the middle of the linked list */
+     */
+
+    @Test
+    public void testLinkedList_mergeLists() {
+        LinkedList<String> newList = new LinkedList<>();
+        newList.insert("A");
+        newList.insert("B");
+        newList.insert("C");
+        System.out.println(newList);
+        LinkedList<String> newList2 = new LinkedList<>();
+        newList2.insert("D");
+        newList2.insert("E");
+        newList2.insert("F");
+        System.out.println(newList2);
+        LinkedList<String> finalList = new LinkedList<>();
+
+
+        assertEquals("Like a zipper people", "List: HEAD->C->F->B->E->A->D->null", finalList.mergeLists(newList, newList2) );
+    }
 
 }
 
