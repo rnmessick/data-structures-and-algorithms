@@ -11,7 +11,7 @@ public class LinkedListTest {
     public void testNewEmptyLinkedList() {
         LinkedList newList = new LinkedList();
         assertTrue("linked list should be empty", newList.isEmpty());
-        assertEquals("Length should be zero",0, newList.length());
+        assertEquals("Length should be zero", 0, newList.length());
     }
 
     // Can properly insert into the linked list
@@ -20,7 +20,7 @@ public class LinkedListTest {
         LinkedList<String> newList = new LinkedList<>();
         newList.insert("Baldr is my doggo");
         assertFalse("linked list should have content", newList.isEmpty());
-        assertEquals("Length should be 1 long",1, newList.length());
+        assertEquals("Length should be 1 long", 1, newList.length());
     }
 
     // Can properly insert multiple nodes into the linked list
@@ -35,7 +35,7 @@ public class LinkedListTest {
 
     //  Will return true when finding a value within the linked list that exist
     @Test
-    public  void testLinkedList_IncludesTrue() {
+    public void testLinkedList_IncludesTrue() {
         LinkedList<String> newList = new LinkedList<String>();
         newList.insert("A");
         newList.insert("B");
@@ -72,7 +72,8 @@ public class LinkedListTest {
 
         assertEquals("Append D to end", "List: HEAD->A->D->null", newList.toString());
     }
-//
+
+    //
     @Test
     public void testLinkedList_insertBefore() {
         LinkedList<String> newList = new LinkedList<>();
@@ -91,7 +92,7 @@ public class LinkedListTest {
         newList.insert("B");
         newList.insert("C");
         newList.insertAfter("B", "D");
-//        System.out.println("Insert After " + newList);
+
         assertEquals("Insert D After B", "List: HEAD->C->B->D->A->null", newList.toString());
     }
 
@@ -104,29 +105,24 @@ public class LinkedListTest {
 
         assertEquals("Should return A and it is two from end", "C", newList.kthFromEnd(2));
     }
-//    @Test
-//    public void testKthFromEnd_kSameLength() {
-//        LinkedList<String> newList = new LinkedList<>();
-//        newList.insert("A");
-//        newList.insert("B");
-//        newList.insert("C");
-//
-//        assertEquals ("k is same as length!", "Exception", newList.kthFromEnd(3));
-//    }
 
-//    @Test
-//    public void testKthFromEnd_kisNegative() {
-//        LinkedList<String> newList = new LinkedList<>();
-//        newList.insert("A");
-//        newList.insert("B");
-//        newList.insert("C");
-//
-//        assertEquals ("k is the same as length!", "Exception", newList.kthFromEnd(-1));
-//    }
-    /*
-    Where k is not a positive integer
-    Where the linked list is of a size 1
-     */
+    @Test
+    public void testKthFromEnd_kSameLength() {
+        LinkedList<String> newList = new LinkedList<>();
+        newList.insert("A");
+        newList.insert("B");
+        newList.insert("C");
+
+        assertEquals("k is same as length!", "Exception", newList.kthFromEnd(3));
+    }
+
+    @Test
+    public void testKthFromEnd_listSizeIsOne() {
+        LinkedList<String> newList = new LinkedList<>();
+        newList.insert("A");
+        System.out.println(newList);
+        assertEquals("Should return exception as the list is only one in length", "Exception", newList.kthFromEnd(1));
+    }
 
     @Test
     public void testLinkedList_mergeLists() {
@@ -134,16 +130,28 @@ public class LinkedListTest {
         newList.insert("A");
         newList.insert("B");
         newList.insert("C");
+
+        LinkedList<String> newList2 = new LinkedList<>();
+        newList2.insert("D");
+        newList2.insert("E");
+        newList2.insert("F");
+
+        assertEquals("Like a zipper people", "List: HEAD->C->F->B->E->A->D->null", LinkedList.mergeLists(newList, newList2).toString());
+    }
+
+    @Test
+    public void testLinkedList_mergeListsUnevenLength() {
+        LinkedList<String> newList = new LinkedList<>();
+        newList.insert("A");
+        newList.insert("B");
         System.out.println(newList);
         LinkedList<String> newList2 = new LinkedList<>();
         newList2.insert("D");
         newList2.insert("E");
         newList2.insert("F");
         System.out.println(newList2);
-        LinkedList<String> finalList = new LinkedList<>();
 
-
-        assertEquals("Like a zipper people", "List: HEAD->C->F->B->E->A->D->null", finalList.mergeLists(newList, newList2) );
+        assertEquals("Should merge even if one list is shorter", "List: HEAD->B->F->A->E->D->null", LinkedList.mergeLists(newList, newList2).toString());
     }
 
 }

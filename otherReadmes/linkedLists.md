@@ -14,6 +14,8 @@ Implement a Singly Linked List Data Structure
 
 ![Image of Whiteboard: Append, InsertBefore, InsertAfter -Singly Linked Lists](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/linkedLists.jpg)
 
+![Image of Whiteboard: Kth from end-Singly Linked Lists](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/linkedListsKth.JPG)
+
 [Link to code](../code401challenges/src/main/java/linkedLists/LinkedList.java)
 
 [Link to tests](../code401challenges/src/test/java/code401challenges/LinkedListTest.java)
@@ -36,7 +38,7 @@ Implement a Singly Linked List Data Structure
 
 **kthFromEnd** a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list.
 
-**mergedList** 
+**mergedList** which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list.
 
 \*\*
 
