@@ -1,4 +1,4 @@
-package linkedLists;
+package code401challenges.linkedLists;
 
 public class Node<T> {
 

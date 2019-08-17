@@ -1,6 +1,5 @@
-package code401challenges;
+package code401challenges.linkedLists;
 
-import linkedLists.LinkedList;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
