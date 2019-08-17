@@ -123,6 +123,13 @@ public class LinkedListTest {
         System.out.println(newList);
         assertEquals("Should return exception as the list is only one in length", "Exception", newList.kthFromEnd(1));
     }
+    @Test
+    public void testKthFromEnd_negativeK() {
+        LinkedList<String> newList = new LinkedList<>();
+        newList.insert("A");
+        System.out.println(newList);
+        assertEquals("Should return exception as k is negative", "Exception", newList.kthFromEnd(-1));
+    }
 
     @Test
     public void testLinkedList_mergeLists() {

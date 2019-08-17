@@ -98,6 +98,7 @@ public class LinkedList<T> {
                 current = current.getNext();
             }
             int checkIndex = tempList.size() - 1 - k;
+
             if (checkIndex < 0) {
                 return "Exception";
             } else {
@@ -106,7 +107,6 @@ public class LinkedList<T> {
 
         } catch (IndexOutOfBoundsException e) {
             e.printStackTrace();
-            System.out.println("Index out of bounds exception");
         }
         return "Exception";
     }
