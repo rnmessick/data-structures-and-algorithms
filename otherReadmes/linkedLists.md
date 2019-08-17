@@ -5,20 +5,26 @@ Implement a Singly Linked List Data Structure
 ## Challenge
 
 <!-- Description of the challenge -->
+Build out a library of methods to instantiate and manipulate a linked list.
 
 ## Approach & Efficiency
 
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
+After building List and Node classes, and their constructors, write out tests to determine the code necessary for the desired results.
+
 ## Solution
 
 ![Image of Whiteboard: Append, InsertBefore, InsertAfter -Singly Linked Lists](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/linkedLists.jpg)
+
 
 ![Image of Whiteboard: Kth from end-Singly Linked Lists](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/linkedListsKth.JPG)
 
 [Link to code](../code401challeneges/src/main/java/code401challenges/linkedLists)
 
 [Link to tests](../code401challenges/src/test/java/code401challenges/linkedLists)
+
+
 
 ## API
 
