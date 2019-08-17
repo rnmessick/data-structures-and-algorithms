@@ -1,4 +1,4 @@
-package linkedLists;
+package code401challenges.linkedLists;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +52,6 @@ public class LinkedList<T> {
         }
         Node<T> newVal = new Node<>(newValue, current.next);
         current.next = newVal;
-
     }
 
     public void insertAfter(T targetVal, T newValue) {
@@ -93,31 +92,36 @@ public class LinkedList<T> {
     public String kthFromEnd(int k) {
         List<T> tempList = new ArrayList<>();
         Node<T> current = this.head;
+        try {
+            while (current != null) {
+                tempList.add(current.getData());
+                current = current.getNext();
+            }
+            int checkIndex = tempList.size() - 1 - k;
 
-        while (current != null) {
-            tempList.add(current.getData());
-            current = current.getNext();
-        }
-        int checkIndex = tempList.size() - 1 - k;
-        if (checkIndex < 0) {
-            return "Exception";
-        } else {
-            return tempList.get(checkIndex).toString();
-        }
+            if (checkIndex < 0) {
+                return "Exception";
+            } else {
+                return tempList.get(checkIndex).toString();
+            }
 
+        } catch (IndexOutOfBoundsException e) {
+            e.printStackTrace();
+        }
+        return "Exception";
     }
 
-    public LinkedList<T> mergeLists(LinkedList<T> list1, LinkedList<T> list2) {
-        Node<T> current1 = list1.head;
-        Node<T> current2 = list2.head;
+    public static LinkedList mergeLists(LinkedList list1, LinkedList list2) {
+        Node current1 = list1.head;
+        Node current2 = list2.head;
 
-        Node<T> next1;
-        Node<T> next2;
+        Node next1;
+        Node next2;
 
         // here is the zipper
-        while (current1 != null && current2 != null) {
-            next1 = current1.getNext();
-            next2 = current2.getNext();
+        while (current1.next != null && current2.next != null) {
+            next1 = current1.next;
+            next2 = current2.next;
 
             current1.setNext(current2);
             current2.setNext(next1);
@@ -125,11 +129,18 @@ public class LinkedList<T> {
             current1 = next1;
             current2 = next2;
         }
+        if (current2.next == null) {
+            current2.next = current1.next;
+            current1.next = current2;
+        } else {
+            current1.next = current2;
+        }
+        System.out.println(list1);
         return list1;
 
     }
 
-    // to use in testing
+    //        // to use in testing
     public boolean isEmpty() {
         return length() == 0;
     }
@@ -146,6 +157,7 @@ public class LinkedList<T> {
         return length;
     }
 
+    //
     // Method to stringify lists
     public String toString() {
         String result = "HEAD";
