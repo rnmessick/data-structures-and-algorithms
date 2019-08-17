@@ -20,7 +20,7 @@ After building List and Node classes, and their constructors, write out tests to
 
 ![Image of Whiteboard: Kth from end-Singly Linked Lists](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/linkedListsKth.JPG)
 
-[Link to code](../code401challeneges/src/main/java/code401challenges/linkedLists)
+[Link to code](../code401challeneges/src/main/java/code401challenges/)
 
 [Link to tests](../code401challenges/src/test/java/code401challenges/linkedLists)
 
