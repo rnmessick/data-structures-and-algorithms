@@ -12,7 +12,11 @@
 
 ## Week 2 Challenges
 
-- [Day 1 & Day 2: Linked List Implementation](./otherReadmes/linkedLists.md)
+- [Week 2: Linked List Implementation](./otherReadmes/linkedLists.md)
+
+## Week 3
+
+- [Week 3: Stacks and Queues Data Structure Implementation](./otherReadmes/stackAndQueue.md)
 
 ## Code 301 Challenges
 
