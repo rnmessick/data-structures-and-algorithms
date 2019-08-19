@@ -17,7 +17,7 @@ public class QueueTest {
         newQueue.enqueue(13);
         System.out.println(newQueue.toString());
 
-        assertEquals("Empty queue should be instantiated", "Queue: FRONT<-13<-null", newQueue.toString());
+        assertEquals("Front should be the value argument", "Queue: FRONT<-13<-null", newQueue.toString());
     }
 
     @Test
@@ -28,11 +28,21 @@ public class QueueTest {
         newQueue.enqueue(6);
         System.out.println(newQueue.toString());
 
-        assertEquals("Empty queue should be instantiated", "Queue: FRONT<-13<-34<-6<-null", newQueue.toString());
+        assertEquals("Multiple values should be added with first value being front", "Queue: FRONT<-13<-34<-6<-null", newQueue.toString());
     }
 
     @Test
-    public void testQueue_dequeue
+    public void testQueue_dequeue() {
+        Queue<Integer> newQueue = new Queue<>(null,null, null);
+        newQueue.enqueue(13);
+        newQueue.enqueue(34);
+        newQueue.enqueue(6);
+
+        newQueue.dequeue();
+
+        assertEquals("Front value should be dequeued", "Queue: FRONT<-34<-6<-null", newQueue.toString() );
+
+    }
     @Test
     public void testQueue_peekEmpty() {
         Queue<Integer> newQueue = new Queue<>(null,null, null);

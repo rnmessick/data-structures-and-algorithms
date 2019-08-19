@@ -22,17 +22,18 @@ This object should be aware of a default empty value assigned to front when the 
 
 ## Approach & Efficiency
 
+Time: O(n)
+Space: O(n);
+
 ## Solution
 
-[Link to code](../code401challenges/src/main/java/code401challenges/BinarySearch.java)
+[Link to code](../code401challenges/src/main/java/code401challenges/stacksandqueues)
 
-[Link to tests](../code401challenges/src/test/java/code401challenges/BinarySearchTest.java)
+[Link to tests](../code401challenges/src/test/java/code401challenges/stacksandqueues)
 
 ## Resources
 
 https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-10/resources/stacks_and_queues.html
-
-https://www.geeksforgeeks.org/queue-interface-java/
 
 ## Collaborators
 
