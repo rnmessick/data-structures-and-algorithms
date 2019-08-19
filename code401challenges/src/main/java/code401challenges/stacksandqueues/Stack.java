@@ -1,5 +1,7 @@
 package code401challenges.stacksandqueues;
 
+import java.util.NoSuchElementException;
+
 public class Stack<T> {
     Node<T> top;
 
@@ -18,19 +20,16 @@ public class Stack<T> {
         this.top = top.next;
         temp.next = null;
 
-
         return temp.value;
     }
 
     public T peek() {
         if (top == null) {
-            return (T) "value is null. Do not pop!";
-        }
-        else {
+            throw new NoSuchElementException("value is null. Do not pop!");
+        } else {
             return (T) ("Top node is: " + top);
         }
     }
-
 
     public String toString() {
         String result = "HEAD";

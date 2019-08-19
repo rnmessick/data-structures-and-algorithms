@@ -13,9 +13,7 @@ public class Node<T> {
         return this.next;
     }
 
-
     public T getData() {
-
         return this.value;
     }
 

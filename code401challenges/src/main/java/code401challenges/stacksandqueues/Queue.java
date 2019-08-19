@@ -3,10 +3,8 @@ package code401challenges.stacksandqueues;
 public class Queue<T> {
     Node<T> front;
     Node<T> back;
-    T value;
 
-    public Queue(T value, Node<T> front, Node<T> back) {
-        this.value = value;
+    public Queue(Node<T> front, Node<T> back) {
         this.front = front;
         this.back = back;
     }
@@ -28,14 +26,12 @@ public class Queue<T> {
         temp.next = null;
 
         return (T) temp;
-
     }
 
     public T peek() {
         if (front == null) {
             return (T) "FRONT is null. Don't dequeue!";
-        }
-        else {
+        } else {
             return (T) ("Front node is: " + front);
         }
     }
