@@ -30,4 +30,10 @@ This object should be aware of a default empty value assigned to front when the 
 
 ## Resources
 
+https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-10/resources/stacks_and_queues.html
+
+https://www.geeksforgeeks.org/queue-interface-java/
+
 ## Collaborators
+
+Jack Kinne, Nicolas Paro, Melfi Perez, Matt Stuhring
