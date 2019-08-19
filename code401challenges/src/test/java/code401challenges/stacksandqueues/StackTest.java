@@ -2,6 +2,8 @@ package code401challenges.stacksandqueues;
 
 import org.junit.Test;
 
+import java.util.NoSuchElementException;
+
 import static org.junit.Assert.*;
 
 public class StackTest {
@@ -18,7 +20,7 @@ public class StackTest {
         Stack<Integer> newStack = new Stack<>();
         newStack.push(13);
 
-        assertEquals("Should push the value to the top of the stack and reassign top to new value", "List: HEAD->13->null", newStack.toString());
+        assertEquals("Should push the value to the top of the stack and reassign top to new value", "Stack: HEAD->13->null", newStack.toString());
     }
     @Test
     public void testStack_pushMany() {
@@ -27,7 +29,7 @@ public class StackTest {
         newStack.push(7);
         newStack.push(13);
 
-        assertEquals("Should push the value to the top of the stack and reassign top to new value", "List: HEAD->13->7->3->null", newStack.toString());
+        assertEquals("Should push the value to the top of the stack and reassign top to new value", "Stack: HEAD->13->7->3->null", newStack.toString());
     }
 
     @Test
@@ -40,6 +42,7 @@ public class StackTest {
 
         assertEquals("Should pop the top value and return it", 13, saved);
     }
+
     @Test (expected = NullPointerException.class)
     public void testStack_popNull() {
         Stack<Integer> newStack = new Stack<>();
@@ -57,17 +60,14 @@ public class StackTest {
             newStack.pop();
         }
 
-        assertEquals("Should keeping popping until it's empty", "List: HEAD->null", newStack.toString());
-
+        assertEquals("Should keeping popping until it's empty", "Stack: HEAD->null", newStack.toString());
     }
-    @Test
+
+    @Test (expected = NoSuchElementException.class)
     public void testStack_peekNull() {
         Stack<Integer> newStack = new Stack<>();
-        System.out.println(newStack.peek());
 
         assertEquals("Should return a warning message not to pop.", "value is null. Do not pop!", newStack.peek());
-
     }
-
 
 }
