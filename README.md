@@ -16,7 +16,9 @@
 
 ## Week 3
 
-- [Week 3: Stacks and Queues Data Structure Implementation](./otherReadmes/stackAndQueue.md)
+- [Day 1: Stacks and Queues Data Structure Implementation](./otherReadmes/stackAndQueue.md)
+
+- [Day 2: PseudoQueue Data Structure Implementation](./otherReadmes/pseudoQueue.md)
 
 ## Code 301 Challenges
 
