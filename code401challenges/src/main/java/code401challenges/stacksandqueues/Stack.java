@@ -32,7 +32,7 @@ public class Stack<T> {
     }
 
     public String toString() {
-        String result = "HEAD";
+        String result = "TOP";
         Node<T> current = this.top;
         while (current != null) {
             result += "->" + current.getData();
