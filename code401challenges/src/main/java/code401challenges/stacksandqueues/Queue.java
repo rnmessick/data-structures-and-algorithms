@@ -9,6 +9,10 @@ public class Queue<T> {
         this.back = back;
     }
 
+    public Queue() {
+
+    }
+
     public void enqueue(T newValue) {
         Node<T> newNode = new Node<>(newValue);
         if (front == null) {
@@ -47,4 +51,5 @@ public class Queue<T> {
         result += "<-null";
         return "Queue: " + result;
     }
+
 }
