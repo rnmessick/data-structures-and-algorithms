@@ -15,7 +15,7 @@ O(1) space
 
 [Link to tests](../code401challenges/src/test/java/code401challenges/stacksandqueues/PseudoQueueTest.java)
 
-![Image of Whiteboard Shift Insert Array](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/pseudoQueue.jpg)
+![Image of Whiteboard pseudoQueue](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/pseudoQueue.JPG)
 
 ## Resources
 
