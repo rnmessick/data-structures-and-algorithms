@@ -42,4 +42,21 @@ public class Stack<T> {
         result += "->null";
         return "Stack: " + result;
     }
+
+    public boolean isEmpty() {
+        return length() == 0;
+    }
+
+    public int length() {
+        int length = 0;
+        Node<T> current = top;
+
+        while (current != null) {
+            length++;
+
+            current = current.next;
+        }
+        return length;
+    }
+
 }
