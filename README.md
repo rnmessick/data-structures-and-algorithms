@@ -20,6 +20,10 @@
 
 - [Day 2: PseudoQueue Data Structure Implementation](./otherReadmes/pseudoQueue.md)
 
+- [Day 3: First-in-First-out Animal Shelter](./otherReadmes/fifoAnimalShelter.md)
+
+- [Day 4: Multi-Bracket Validation](./otherReadmes/multiBracketValidation.md)
+
 ## Code 301 Challenges
 
 - [Inside their directory](./301-code-challenges)
