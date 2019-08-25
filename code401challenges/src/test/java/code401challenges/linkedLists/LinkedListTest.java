@@ -119,14 +119,14 @@ public class LinkedListTest {
     public void testKthFromEnd_listSizeIsOne() {
         LinkedList<String> newList = new LinkedList<>();
         newList.insert("A");
-        System.out.println(newList);
+
         assertEquals("Should return exception as the list is only one in length", "Exception", newList.kthFromEnd(1));
     }
-    @Test
+    @Test(expected = IndexOutOfBoundsException.class)
     public void testKthFromEnd_negativeK() {
         LinkedList<String> newList = new LinkedList<>();
         newList.insert("A");
-        System.out.println(newList);
+
         assertEquals("Should return exception as k is negative", "Exception", newList.kthFromEnd(-1));
     }
 
@@ -150,12 +150,11 @@ public class LinkedListTest {
         LinkedList<String> newList = new LinkedList<>();
         newList.insert("A");
         newList.insert("B");
-        System.out.println(newList);
+
         LinkedList<String> newList2 = new LinkedList<>();
         newList2.insert("D");
         newList2.insert("E");
         newList2.insert("F");
-        System.out.println(newList2);
 
         assertEquals("Should merge even if one list is shorter", "List: HEAD->B->F->A->E->D->null", LinkedList.mergeLists(newList, newList2).toString());
     }
