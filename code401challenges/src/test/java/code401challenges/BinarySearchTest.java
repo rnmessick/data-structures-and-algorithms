@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 public class BinarySearchTest {
     @Test
     public void testBinarySearch_found() {
-        assertTrue("Index is returned if key is in array", BinarySearch.binarySearch(new int[]{1, 2, 3, 4, 5}, 2) == 1);
+        assertEquals("Index is returned if key is in array", 1, BinarySearch.binarySearch(new int[]{1, 2, 3, 4, 5}, 2));
     }
     @Test
     public void testBinarySearch_notFound() {
