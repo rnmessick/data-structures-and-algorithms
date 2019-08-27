@@ -15,14 +15,14 @@ public class Tree<T> {
         this.root = root;
     }
 
-    public ArrayList preOrder(Node<T> node, ArrayList arrList) {
+    public ArrayList<T> preOrder(Node<T> current, ArrayList arrList) {
         // root first
-        arrList.add(node.value);
-        if(node.leftChild != null) {
-            preOrder(node.leftChild, arrList);
+        arrList.add(current.value);
+        if(current.leftChild != null) {
+            preOrder(current.leftChild, arrList);
         }
-        if(node.rightChild != null) {
-            preOrder(node.rightChild, arrList);
+        if(current.rightChild != null) {
+            preOrder(current.rightChild, arrList);
         }
         return arrList;
     }
@@ -58,4 +58,8 @@ public class Tree<T> {
         return root;
     }
 
+    @Override
+    public String toString() {
+        return this.root.toString();
+    }
 }
