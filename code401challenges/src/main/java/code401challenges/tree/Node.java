@@ -1,25 +1,43 @@
 package code401challenges.tree;
 
-public class Node{
-    int value;
-    Node leftChild;
-    Node rightChild;
+public class Node<T>{
+    T value;
+    Node<T> leftChild;
+    Node<T> rightChild;
 
-    Node(int value) {
+    public Node(T value) {
+        this.value = null;
+        this.leftChild = null;
+        this.rightChild = null;
+    }
+
+    public void setValue(T value) {
         this.value = value;
-        leftChild = null;
-        rightChild = null;
     }
 
-    public Node getRightNode() {
-        return rightChild;
+    public void setLeftChild(Node<T> leftChild) {
+        this.leftChild = leftChild;
     }
 
-    public Node getLeftNode() {
+    public void setRightChild(Node<T> rightChild) {
+        this.rightChild = rightChild;
+    }
+
+    public Node(T value, Node<T> leftChild, Node<T> rightChild) {
+        this.value = value;
+        this.leftChild = leftChild;
+        this.rightChild = rightChild;
+    }
+
+    public T getValue() {
+        return value;
+    }
+
+    public Node<T> getLeftChild() {
         return leftChild;
     }
 
-    public Integer getValue() {
-        return value;
+    public Node<T> getRightChild() {
+        return rightChild;
     }
 }

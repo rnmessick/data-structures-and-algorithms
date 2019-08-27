@@ -1,50 +1,53 @@
 package code401challenges.tree;
 
-public class BinarySearchTree extends Tree {
-    Node root;
+public class BinarySearchTree extends Tree<Integer> {
+    public BinarySearchTree() {
+        super();
+    }
 
-    public BinarySearchTree(Node root) {
-        super(root);
+    public BinarySearchTree(int firstValue) {
+
+        super(new Node(firstValue, null, null));
     }
 
     //https://www.baeldung.com/java-binary-tree
-    // search through for a value by comparing it to the value
-    // in the current node, then continue in the left or right depending on the value
-    private boolean containsHelper(Node current, int value) {
-        if (current == null) {
-            return false;
-        }
-        if (value == current.value) {
-            return true;
-        }
-        return value < current.value
-                ? containsHelper(current.leftChild, value)
-                : containsHelper(current.rightChild, value);
-    }
-
     public boolean contains(int value) {
         return containsHelper(root, value);
     }
-
-    private Node addHelper(Node current, int value) {
-        //check if tree is empty, if so add new node
+    // search through for a value by comparing it to the value
+    // in the current node, then continue in the left or right depending on the value
+    private boolean containsHelper(Node<Integer> current, int numberToFind) {
         if (current == null) {
-            current = new Node(value);
-            return current;
+            return false;
         }
-
-        if (value < current.value) {
-            current.leftChild = addHelper(current.leftChild, value);
-        } else if (value > current.value) {
-            current.rightChild = addHelper(current.rightChild, value);
-            //value already exists
+        if (numberToFind == current.value) {
+            return true;
         }
-        return current;
+        return numberToFind < current.value
+                ? containsHelper(current.leftChild, numberToFind)
+                : containsHelper(current.rightChild, numberToFind);
     }
 
 
-    public void add(int value) {
-        root = addHelper(root, value);
+    public void add(int numbertoAdd) {
+
+        this.root = addHelper(this.root, numbertoAdd);
+    }
+
+    public Node<Integer> addHelper(Node<Integer> current, int numberToAdd) {
+        //check if tree is empty, if so add new node
+        if (current == null) {
+            current = new Node(numberToAdd, null, null);
+            return current;
+        }
+
+        if (numberToAdd < current.value) {
+            current.leftChild = addHelper(current.leftChild, numberToAdd);
+        } else if (numberToAdd > current.value) {
+            current.rightChild = addHelper(current.rightChild, numberToAdd);
+            //value already exists
+        }
+        return current;
     }
 
 }
