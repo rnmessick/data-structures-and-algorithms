@@ -5,17 +5,9 @@ import code401challenges.tree.Tree;
 
 public class FizzBuzzTree {
 
-    public FizzBuzzTree(Node<Object> nodes) {
-    }
-
     public static Tree<Object> fizzBuzzTree(Tree<Object> tree) {
         //check if tree has a root
-        if(tree.root.getValue() == null) {
-            throw new IllegalArgumentException("Root is null");
-        }
-        else {
-            fizzBuzzHelper((Node<Object>) tree.root.getValue());
-        }
+        fizzBuzzHelper(tree.getRoot());
         return tree;
     }
 

@@ -6,6 +6,7 @@ public class Tree<T> {
 
     public Node<T> root;
 
+
     public Tree() {
         this.root = null;
     }
@@ -51,6 +52,10 @@ public class Tree<T> {
         arrList.add(node.value);
 
         return arrList;
+    }
+
+    public Node<T> getRoot() {
+        return root;
     }
 
 }
