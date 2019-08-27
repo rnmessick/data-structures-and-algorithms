@@ -2,15 +2,19 @@ package code401challenges.tree;
 
 import java.util.ArrayList;
 
-public class Tree {
+public class Tree<T> {
 
-    Node root;
+    public Node<T> root;
 
-    public Tree(Node root) {
+    public Tree() {
         this.root = null;
     }
 
-    public ArrayList preOrder(Node node, ArrayList arrList) {
+    public Tree(Node<T> root) {
+        this.root = root;
+    }
+
+    public ArrayList preOrder(Node<T> node, ArrayList arrList) {
         // root first
         arrList.add(node.value);
         if(node.leftChild != null) {
@@ -22,7 +26,7 @@ public class Tree {
         return arrList;
     }
 
-    public ArrayList inOrder(Node node, ArrayList arrList) {
+    public ArrayList inOrder(Node<T> node, ArrayList arrList) {
 
         if(node.leftChild != null) {
             inOrder(node.leftChild, arrList);
@@ -36,7 +40,7 @@ public class Tree {
         return arrList;
     }
 
-    public ArrayList postOrder(Node node, ArrayList arrList) {
+    public ArrayList postOrder(Node<T> node, ArrayList arrList) {
 
         if (node.leftChild != null) {
             postOrder(node.leftChild, arrList);
