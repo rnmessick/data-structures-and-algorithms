@@ -1,13 +1,15 @@
 package code401challenges.tree;
 
 public class BinarySearchTree extends Tree {
-    Node root;
 
     public BinarySearchTree(Node root) {
         super(root);
     }
 
     //https://www.baeldung.com/java-binary-tree
+    public boolean contains(int value) {
+        return containsHelper(root, value);
+    }
     // search through for a value by comparing it to the value
     // in the current node, then continue in the left or right depending on the value
     private boolean containsHelper(Node current, int value) {
@@ -22,8 +24,9 @@ public class BinarySearchTree extends Tree {
                 : containsHelper(current.rightChild, value);
     }
 
-    public boolean contains(int value) {
-        return containsHelper(root, value);
+
+    public void add(int value) {
+        root = addHelper(root, value);
     }
 
     private Node addHelper(Node current, int value) {
@@ -40,11 +43,6 @@ public class BinarySearchTree extends Tree {
             //value already exists
         }
         return current;
-    }
-
-
-    public void add(int value) {
-        root = addHelper(root, value);
     }
 
 }
