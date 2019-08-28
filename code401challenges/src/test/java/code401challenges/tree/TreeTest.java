@@ -25,24 +25,24 @@ public class TreeTest {
     }
 
     @Test
-    public void testPreOrder() {
-        //https://www.gontu.org/check-array-represents-preorder-traversal-binary-tree/
-//        ArrayList testList = new ArrayList();
-//        testList.add(2);
-//        testList.add(1);
-//        testList.add(3);
-//
-//        BinarySearchTree binaryTree = new BinarySearchTree();
-//        binaryTree.add(1);
-//        binaryTree.add(2);
-//        binaryTree.add(3);
-//
-//        assertEquals("preorder binary search", "2,1,3"
+    public void testBreadthFirstTraversal() {
+        //                3
+        //               /  \
+        //              7    11
+        //             /        \
+        //            5         15
+        //          /
+        //         2
+
+        Node<Object> nodes = new Node<>(3,
+                new Node<>(7, new Node<>(5, new Node<>(2,
+                        null, null), null), null),
+                new Node<>(11, new Node<>(15, null, null), null ));
+        Tree<Object> bTree = new Tree<>(nodes);
+        System.out.println(nodes.toString());
+
+        assertEquals("Nodes should be printed out top down, left to right ",
+                "( ( ( ( . 2 . ) Buzz . ) 7 . ) Fizz ( ( . FizzBuzz . ) 11 . ) )", Tree.breadthFirstTraversal(bTree).toString());
     }
-//    Can successfully instantiate an empty tree
-//    Can successfully instantiate a tree with a single root node
-//    Can successfully add a left child and right child to a single root node
-//    Can successfully return a collection from a preorder traversal
-//    Can successfully return a collection from an inorder traversal
-//    Can successfully return a collection from a postorder traversal
+
 }

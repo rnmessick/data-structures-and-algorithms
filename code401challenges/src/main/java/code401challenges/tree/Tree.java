@@ -1,5 +1,7 @@
 package code401challenges.tree;
 
+import code401challenges.stacksandqueues.Queue;
+
 import java.util.ArrayList;
 
 public class Tree<T> {
@@ -52,6 +54,26 @@ public class Tree<T> {
         arrList.add(node.value);
 
         return arrList;
+    }
+
+    public static Queue breadthFirstTraversal(Tree<Object> node) {
+        Queue breadthSearch = new Queue();
+        breadthSearch.enqueue(node);
+
+        while (breadthSearch.peek() != null) {
+            Node frontNode = new Node(breadthSearch.dequeue());
+
+
+            if (frontNode.leftChild != null) {
+                breadthSearch.enqueue(frontNode.leftChild);
+            }
+
+            if (frontNode.rightChild != null) {
+                breadthSearch.enqueue(frontNode.rightChild);
+            }
+
+        }
+        return breadthSearch;
     }
 
     public Node<T> getRoot() {
