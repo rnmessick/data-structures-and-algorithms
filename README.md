@@ -24,6 +24,14 @@
 
 - [Day 4: Multi-Bracket Validation](./otherReadmes/multiBracketValidation.md)
 
+## Week 4
+
+- [Day 1: Binary Tree Data Structure Implementation](./otherReadmes/binaryTree.md)
+
+- [Day 2: Fizz Buzz Tree Implementation](./otherReadmes/fizzBuzzTree.md)
+
+- [Day 3: Breadth First Tree Traversal](./otherReadmes/binaryTree.md)
+
 ## Code 301 Challenges
 
 - [Inside their directory](./301-code-challenges)

@@ -20,6 +20,10 @@ Implement a Tree
 
 2C. Define a method named contains that accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
 
+**Write a breadth first traversal method which takes a Binary Tree as its unique input.**
+
+Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach; print every visited node’s value.
+
 ## Solution
 
 [Link to code](../code401challenges/src/main/java/code401challenges/tree)
@@ -41,3 +45,5 @@ Nick Paro
 Melfi Perez
 
 Jack Kinne
+
+Matt Stuhring
