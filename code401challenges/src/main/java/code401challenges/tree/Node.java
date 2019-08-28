@@ -40,4 +40,12 @@ public class Node<T>{
     public Node<T> getRightChild() {
         return rightChild;
     }
+
+    @Override
+    public String toString() {
+        return String.format("( %s %s %s )",
+                this.leftChild == null ? "." : this.leftChild.toString(),
+                this.value,
+                this.rightChild == null ? "." : this.rightChild.toString());
+    }
 }

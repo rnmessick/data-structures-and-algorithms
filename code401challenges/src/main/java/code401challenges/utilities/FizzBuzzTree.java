@@ -7,29 +7,24 @@ public class FizzBuzzTree {
 
     public static Tree<Object> fizzBuzzTree(Tree<Object> tree) {
         //check if tree has a root
-        fizzBuzzHelper(tree.getRoot());
+        fizzBuzzHelper(tree.root);
         return tree;
     }
 
-    private static void fizzBuzzHelper(Node<Object> node) {
-        if(node.getLeftChild() != null) {
-            fizzBuzzHelper((node.getLeftChild()));
-        }
-        if(node.getRightChild() != null) {
-            fizzBuzzHelper((node.getRightChild()));
-        }
-        String numberCheck = (String) node.getValue();
-
-        // I chose 15 rather than checking for the 3 && 5 because I felt like it is more efficient. It worked for me when we did fizzbuzz in Javascript
-        if (Integer.parseInt(numberCheck) % 15 == 0) {
-            node.setValue("FizzBuzz");
-        }
-        else if (Integer.parseInt(numberCheck) % 3 == 0) {
-            node.setValue("Fizz");
-        }
-        else if (Integer.parseInt(numberCheck) % 5 == 0) {
-            node.setValue("Buzz");
+    private static void fizzBuzzHelper(Node<Object> root) {
+        if (root != null) {
+            //refactoring while watching on front row
+            if ((int) root.getValue() % 15 == 0) {
+                root.setValue("FizzBuzz");
+            } else if ((int) root.getValue() % 5 == 0) {
+                root.setValue("Buzz");
+            } else if ((int) root.getValue() % 3 == 0) {
+                root.setValue("Fizz");
+            }
+            //check the left subtree
+            fizzBuzzHelper(root.getLeftChild());
+            //check the right subtree
+            fizzBuzzHelper(root.getRightChild());
         }
     }
-
 }
