@@ -30,7 +30,7 @@ Without utilizing any of the built-in methods available to your language, traver
 
 ## Solution
 
-![Image of Whiteboard max-value-tree](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/maxValueTree.JPG)
+![Image of Whiteboard max-value-tree](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/findMaxValue.JPG)
 
 [Link to code](../code401challenges/src/main/java/code401challenges/tree)
 
