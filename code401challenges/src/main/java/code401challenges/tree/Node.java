@@ -2,8 +2,8 @@ package code401challenges.tree;
 
 public class Node<T>{
     T value;
-    Node<T> leftChild;
-    Node<T> rightChild;
+    int leftChild;
+    int rightChild;
 
     public Node(T value) {
         this.value = null;
@@ -12,7 +12,7 @@ public class Node<T>{
     }
 
     public void setValue(T value) {
-        this.value = value;
+        this.value = (T) value;
     }
 
     public void setLeftChild(Node<T> leftChild) {

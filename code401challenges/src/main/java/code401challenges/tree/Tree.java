@@ -56,25 +56,48 @@ public class Tree<T> {
         return arrList;
     }
 
-    public static Queue breadthFirstTraversal(Tree<Object> node) {
-        Queue breadthSearch = new Queue();
-        breadthSearch.enqueue(node);
+    public static ArrayList breadthFirstTraversal(Tree<Object> node) {
+        ArrayList arrList = new ArrayList();
+        Queue breadthSearchQ = new Queue();
+        breadthSearchQ.enqueue(node);
 
-        while (breadthSearch.peek() != null) {
-            Node frontNode = new Node(breadthSearch.dequeue());
-
+        while (breadthSearchQ.peek() != null) {
+            Node frontNode = new Node(breadthSearchQ.dequeue());
 
             if (frontNode.leftChild != null) {
-                breadthSearch.enqueue(frontNode.leftChild);
+                breadthSearchQ.enqueue(frontNode.leftChild);
             }
 
             if (frontNode.rightChild != null) {
-                breadthSearch.enqueue(frontNode.rightChild);
+                breadthSearchQ.enqueue(frontNode.rightChild);
+
             }
+            arrList.add(breadthSearchQ);
 
         }
-        return breadthSearch;
+        return arrList;
     }
+
+
+    public static Integer findMaxValue(Node treeNode) {
+        if (treeNode == null) {
+            return Integer.MIN_VALUE;
+        }
+        int maxResult = (int) treeNode.value;
+        int leftChildResult = treeNode.leftChild;
+        int rightChildResult = treeNode.rightChild;
+
+        if (leftChildResult > maxResult) {
+            maxResult = leftChildResult;
+        }
+
+        if (rightChildResult > maxResult) {
+            maxResult = rightChildResult;
+        }
+        return maxResult;
+    }
+
+
 
     public Node<T> getRoot() {
         return root;
