@@ -31,6 +31,7 @@
 - [Day 2: Fizz Buzz Tree Implementation](./otherReadmes/fizzBuzzTree.md)
 
 - [Day 3: Breadth First Tree Traversal](./otherReadmes/binaryTree.md)
+- [Day 4: Find Max Value Tree Traversal](./otherReadmes/binaryTree.md)
 
 ## Code 301 Challenges
 
