@@ -79,19 +79,25 @@ public class Tree<T> {
     }
 
 
-    public static Integer findMaxValue(Node treeNode) {
+    public static int findMaxValue(Node<Integer> treeNode) {
+        //where is the max?
+        //solving recursively
         if (treeNode == null) {
             return Integer.MIN_VALUE;
         }
+         //might be node.value
         int maxResult = (int) treeNode.value;
+        //might be in the left subtree
         int leftChildResult = treeNode.leftChild;
+         //might be in the right subtree
         int rightChildResult = treeNode.rightChild;
 
-        if (leftChildResult > maxResult) {
+        //find the max from those three spots
+        if (treeNode.leftChild != null) {
             maxResult = leftChildResult;
         }
 
-        if (rightChildResult > maxResult) {
+        if (rightChildResult != null) {
             maxResult = rightChildResult;
         }
         return maxResult;
