@@ -33,6 +33,12 @@
 - [Day 3: Breadth First Tree Traversal](./otherReadmes/binaryTree.md)
 - [Day 4: Find Max Value Tree Traversal](./otherReadmes/binaryTree.md)
 
+## Week 5
+- [Day 1: Insertion Sort](./otherReadmes/insertionSort.md)
+
+- [Day 2: Merge Sort](./otherReadmes/mergeSort.md)
+
+
 ## Code 301 Challenges
 
 - [Inside their directory](./301-code-challenges)
