@@ -24,6 +24,8 @@ Reading
 
 [Baeldung Java InsertionSort](https://www.baeldung.com/java-insertion-sort)
 
+[Cool diagrams of insertion sort](https://www.w3resource.com/java-exercises/sorting/java-sorting-algorithm-exercise-7.php)
+
 Video
 
 [Geeks for Geeks Youtube Video on Insertion Sort](https://www.youtube.com/watch?v=OGzPmgsI-pQ)
