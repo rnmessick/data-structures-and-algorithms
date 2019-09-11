@@ -13,4 +13,12 @@ public class MergeSortTest {
         MergeSort.mergeSortRecursive(testArr, testArr.length);
         assertArrayEquals(expectedArr, testArr);
     }
+    @Test
+    public void mergeSortTest_negativeValues() {
+        int[] testArr = {-7, 3, 1, 5, -2, 6, 4};
+        int[] expectedArr = {-7, -2, 1, 3, 4, 5, 6};
+
+        MergeSort.mergeSortRecursive(testArr, testArr.length);
+        assertArrayEquals(expectedArr, testArr);
+    }
 }
