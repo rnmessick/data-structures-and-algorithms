@@ -6,19 +6,15 @@ The time complexity for this is O(n^2) which is not very efficient.
 
 ## Learning Objectives
 
-- Coming soon!
+What is insertion Sort? When should we use it?
 
 ## Information Flow
 
 - Coming soon!
 
-## Diagram
+## Algorithm & Diagram
 
-**Coming Soon!**
-
-## Algorithm
-
-Coming soon!
+![Borrowed from Geeks for Geeks](/assets/insertionSort.png)
 
 ## Pseudo Code
 
