@@ -12,11 +12,11 @@ What is insertion Sort? When should we use it?
 
 Insertion sort: A very simple algorithm used for sorting. If you think of it like sort a hand of cards, it works much the same way.
 
-Uses: Insertion sort is used for either a small array or if the array is sorted or nearly sorted, it's short but in its worst case, takes n^2 time. 
+Uses: Insertion sort is used for either a small array or if the array is sorted or nearly sorted, it's short but in its worst case, takes n^2 time.
 
 Much like someone asking you to sort an entire deck of cards in your hands, you could probably do it, it's just going to take a while.
 
-Insertion Sort does not utilize a recursive method.  
+Insertion Sort does not utilize a recursive method.
 
 ## Algorithm & Diagram
 
@@ -35,11 +35,10 @@ Insertion Sort does not utilize a recursive method.
         j <-- j - 1
 
       arr[j + 1] <-- temp
-      
-## Code
-[Solution](/insertionsort/InsertionSort.java)
 
-[Tests](/insertionsort/InsertionSortTest.java)
+## Code
+
+[Solution](/InsertionSort.java)
 
 ## Readings and References
 
@@ -50,5 +49,7 @@ Readings
 [Baeldung Java InsertionSort](https://www.baeldung.com/java-insertion-sort)
 
 Video
+
+[CodeArchery Animated Video](https://www.youtube.com/watch?v=uMqVuEEWJv4&t=263s)
 
 [Geeks for Geeks Youtube Video on Insertion Sort](https://www.youtube.com/watch?v=OGzPmgsI-pQ)
