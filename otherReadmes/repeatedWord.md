@@ -33,4 +33,6 @@ Without utilizing any of the built-in library methods available to your language
 
 ## Resources
 
-[Searching for Duplicated in a String]() https://www.javatpoint.com/program-to-find-the-duplicate-words-in-a-string)
+[Searching for Duplicated in a String]( https://www.javatpoint.com/program-to-find-the-duplicate-words-in-a-string)
+
+[Split a string without built-in methods](https://www.quora.com/How-do-I-split-string-without-using-inbuilt-functions)
