@@ -34,10 +34,15 @@
 - [Day 4: Find Max Value Tree Traversal](./otherReadmes/binaryTree.md)
 
 ## Week 5
-- [Day 1: Insertion Sort](./otherReadmes/insertionSort.md)
+- [Day 1: Insertion Sort](/code401challenges/src/main/java/code401challenges/quickSort/BLOG.md)
 
-- [Day 2: Merge Sort](./otherReadmes/mergeSort.md)
+- [Day 2: Merge Sort](/code401challenges/src/main/java/code401challenges/mergeSort/BLOG.md)
 
+- [Day 3: Quick Sort](/code401challenges/src/main/java/code401challenges/insertionsort/BLOG.md)
+
+## Week 6
+
+- [Day 1: Hash Table](/code401challenges/src/main/java/code401challenges/hashTable/BLOG.md)
 
 ## Code 301 Challenges
 
