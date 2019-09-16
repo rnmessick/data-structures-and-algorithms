@@ -60,7 +60,7 @@ public class StackTest {
             newStack.pop();
         }
 
-        assertEquals("Should keeping popping until it's empty", "Stack: HEAD->null", newStack.toString());
+        assertEquals("Should keeping popping until it's empty", "Stack: TOP->null", newStack.toString());
     }
 
     @Test (expected = NoSuchElementException.class)

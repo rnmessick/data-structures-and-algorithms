@@ -17,7 +17,7 @@
 //        this.root = root;
 //    }
 //
-//    public ArrayList<T> preOrder(Node<T> current, ArrayList arrList) {
+//    public ArrayList<T> preOrder(Node<T> current, ArrayList<T> arrList) {
 //        // root first
 //        arrList.add(current.value);
 //        if(current.leftChild != null) {
@@ -29,7 +29,7 @@
 //        return arrList;
 //    }
 //
-//    public ArrayList inOrder(Node<T> node, ArrayList arrList) {
+//    public ArrayList<T> inOrder(Node<T> node, ArrayList<T> arrList) {
 //
 //        if(node.leftChild != null) {
 //            inOrder(node.leftChild, arrList);
@@ -43,7 +43,7 @@
 //        return arrList;
 //    }
 //
-//    public ArrayList postOrder(Node<T> node, ArrayList arrList) {
+//    public ArrayList<T> postOrder(Node<T> node, ArrayList<T> arrList) {
 //
 //        if (node.leftChild != null) {
 //            postOrder(node.leftChild, arrList);
@@ -63,7 +63,6 @@
 //
 //        while (breadthSearchQ.peek() != null) {
 //            Node frontNode = new Node(breadthSearchQ.dequeue());
-//
 //            if (frontNode.leftChild != null) {
 //                breadthSearchQ.enqueue(frontNode.leftChild);
 //            }
@@ -72,7 +71,7 @@
 //                breadthSearchQ.enqueue(frontNode.rightChild);
 //
 //            }
-//            arrList.add(breadthSearchQ);
+//            arrList.add(breadthSearchQ.frontNode);
 //
 //        }
 //        return arrList;
