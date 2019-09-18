@@ -7,7 +7,7 @@
 //
 //    public BinarySearchTree(int firstValue) {
 //
-//        super(new Node(firstValue, null, null));
+//        super(new Node<>(firstValue, null, null));
 //    }
 //
 //    //https://www.baeldung.com/java-binary-tree
@@ -16,29 +16,27 @@
 //    }
 //    // search through for a value by comparing it to the value
 //    // in the current node, then continue in the left or right depending on the value
-//    private boolean containsHelper(Node<Integer> current, int numberToFind) {
+//    private <T> boolean containsHelper(Node current, T numberToFind) {
 //        if (current == null) {
 //            return false;
 //        }
 //        if (numberToFind == current.value) {
 //            return true;
 //        }
-//        return numberToFind < current.value
-//                ? containsHelper(current.leftChild, numberToFind)
-//                : containsHelper(current.rightChild, numberToFind);
+//        return false;
 //    }
 //
 //
-//    public void add(int numbertoAdd) {
+//    public <T> void add(T numberToAdd) {
 //
-//        this.root = addHelper(this.root, numbertoAdd);
+//        this.root = addHelper(this.root, (Integer) numberToAdd);
 //    }
 //
-//    public Node<Integer> addHelper(Node<Integer> current, int numberToAdd) {
+//    public <T> Node<Integer> addHelper(Node<T> current, int numberToAdd) {
 //        //check if tree is empty, if so add new node
 //        if (current == null) {
-//            current = new Node(numberToAdd, null, null);
-//            return current;
+//            current = (Node<T>) new Node<>(numberToAdd, null, null);
+//            return (Node<Integer>) current;
 //        }
 //
 //        if (numberToAdd < current.value) {
@@ -47,7 +45,7 @@
 //            current.rightChild = addHelper(current.rightChild, numberToAdd);
 //            //value already exists
 //        }
-//        return current;
+//        return (Node<Integer>) current;
 //    }
 //
 //}

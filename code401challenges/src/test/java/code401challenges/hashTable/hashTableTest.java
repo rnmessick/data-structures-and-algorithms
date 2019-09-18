@@ -8,12 +8,12 @@ public class hashTableTest {
 
     @Test
     public void testHashTable_instantiateTable() {
-        HashTable<String, String> ht = new HashTable<>();
+        HashTable<String, String> ht = new HashTable<>(10);
         assertEquals("HashTable should be empty", 0, ht.size());
     }
     @Test
     public void testHashTable_addKeyValuePair() {
-        HashTable<String, String> ht = new HashTable<>();
+        HashTable<String, String> ht = new HashTable<>(10);
         ht.add("Steve", "Husband");
         ht.add("Baldr", "Dog");
         ht.add("Susan", "Best Friend");
@@ -25,22 +25,22 @@ public class hashTableTest {
 
     @Test
     public void testHashTable_searchForKeyAndGetValue() {
-        HashTable<String, String> ht = new HashTable<>();
+        HashTable<String, String> ht = new HashTable<>(10);
         ht.add("Robin", "Sister");
         ht.add("Eric", "Nephew");
         assertEquals("Value should print out as sister", "Sister", ht.get("Robin"));
     }
     @Test
     public void testHashTable_searchForKeyAndGetNull() {
-        HashTable<String, String> ht = new HashTable<>();
+        HashTable<String, String> ht = new HashTable<>(10);
         ht.add("Robin", "Sister");
         ht.add("Eric", "Nephew");
-        assertEquals("Value should print out as null", null, ht.get("Sam"));
+        assertEquals("Value should print out as null", "The key does not exist", ht.get("Sam"));
     }
 
     @Test
     public void testHashTable_handleCollision() {
-        HashTable<String, String> ht = new HashTable<>();
+        HashTable<String, String> ht = new HashTable<>(10);
         ht.add("Steve", "Husband");
         ht.add("Baldr", "Dog");
         ht.add("Susan", "Best Friend");
@@ -56,7 +56,7 @@ public class hashTableTest {
 
     @Test
     public void testHashTable_handleCollisionThenRetriveValue() {
-        HashTable<String, String> ht = new HashTable<>();
+        HashTable<String, String> ht = new HashTable<>(10);
         ht.add("Steve", "Husband");
         ht.add("Baldr", "Dog");
         ht.add("Susan", "Best Friend");
