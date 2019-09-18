@@ -44,6 +44,8 @@
 
 - [Day 1: Hash Table](/code401challenges/src/main/java/code401challenges/hashTable/BLOG.md)
 
+- [Day 1: Code Challenge 31: Repeated Word](./otherReadmes/repeatedWord.md)
+
 ## Code 301 Challenges
 
 - [Inside their directory](./301-code-challenges)
