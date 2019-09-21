@@ -5,7 +5,7 @@ public class Node {
     int value;
     Node next;
 
-    public Node(int value) {
+    public Node(Node value) {
         this.value = value;
         this.next = null;
     }

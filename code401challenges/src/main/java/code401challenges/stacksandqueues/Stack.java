@@ -9,7 +9,7 @@ public class Stack<T> {
         this.top = null;
     }
 
-    public void push(int newValue) {
+    public void push(Node newValue) {
         Node newNode = new Node(newValue);
         newNode.next = this.top;
         this.top = newNode;
@@ -59,4 +59,6 @@ public class Stack<T> {
         return length;
     }
 
+    public void push(T root1) {
+    }
 }
