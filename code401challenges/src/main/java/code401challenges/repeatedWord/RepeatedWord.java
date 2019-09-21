@@ -14,7 +14,7 @@ public class RepeatedWord {
         string = string.toLowerCase();
 
         //split the string into words
-        String words[] = stringSplitter(string);
+        String[] words = stringSplitter(string);
 
         for( int i = 0; i < words.length; i++) {
             count = 1;
@@ -30,8 +30,6 @@ public class RepeatedWord {
                 System.out.println(words[i]);
             }
         }
-
-
     }
 
     public String[] stringSplitter(String string) throws IOException {

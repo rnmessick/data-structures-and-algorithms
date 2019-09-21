@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 class HashTable<K, V> {
 
-    private ArrayList<Node<K, V>> buckeyArray;
+    public ArrayList<Node<K, V>> buckeyArray;
 
     //current capacity of array list
     public int numBuckets;
 
     //current size of array list
-    private int size;
+    public int size;
 
     public HashTable() {
         buckeyArray = new ArrayList<>();
@@ -27,7 +27,7 @@ class HashTable<K, V> {
     public boolean isEmpty() { return size() == 0; }
 
     // hashing
-    private int hash(String key) {
+    public int hash(String key) {
         int hashValue = 0;
         char[] letters = key.toCharArray();
         for(int i = 0; i < letters.length; i++) {
@@ -42,8 +42,8 @@ class HashTable<K, V> {
     public void add(K key, V value) {
         // set a var(int) of the hash(key);
         int hashKey = hash((String) key);
-        Node<K, V> head = buckeyArray.get(hashKey);
-        System.out.println(key + " " + hashKey);
+        Node head = buckeyArray.get(hashKey);
+//        System.out.println(key + " " + hashKey);
 
         // if map[hashKey] exists, create a linked list
         // else, add the node
@@ -72,9 +72,9 @@ class HashTable<K, V> {
            for ( int i = 0; i < numBuckets; i++) {
                buckeyArray.add(null);
            }
-           for ( Node<K, V> headNode : temp) {
+           for ( Node headNode : temp) {
                while ( headNode != null) {
-                   add(headNode.key, headNode.value);
+                   add(key, value);
                    headNode = headNode.next;
                }
            }
@@ -87,7 +87,7 @@ class HashTable<K, V> {
         // hash the key
         //if the hash table has the key, send back the value of the node
         int hashKey = hash((String) key);
-        Node<K, V> head = buckeyArray.get(hashKey);
+        Node head = buckeyArray.get(hashKey);
 
         //search key in chain
         while ( head != null) {
@@ -99,13 +99,16 @@ class HashTable<K, V> {
         return null;
         }
 
-
     //has()
-    public boolean contains(String key) {
-        int hashKey = hash(key);
+    public boolean contains(K key) {
+        int hashKey = this.hash((String) key);
         // go through the list and check the actual value
-
-        return buckeyArray.get(hashKey) != null;
+        if (this.buckeyArray.get(hashKey) != null && buckeyArray.get(hashKey).getKey().equals(key)) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
 }

@@ -3,20 +3,20 @@ package code401challenges.stacksandqueues;
 import java.util.NoSuchElementException;
 
 public class Stack<T> {
-    Node<T> top;
+    Node top;
 
     public Stack() {
         this.top = null;
     }
 
-    public void push(T newValue) {
-        Node<T> newNode = new Node<>(newValue);
+    public void push(int newValue) {
+        Node newNode = new Node(newValue);
         newNode.next = this.top;
         this.top = newNode;
     }
 
-    public T pop() {
-        Node<T> temp = this.top;
+    public int pop() {
+        Node temp = this.top;
         this.top = top.next;
         temp.next = null;
 
@@ -33,7 +33,7 @@ public class Stack<T> {
 
     public String toString() {
         String result = "TOP";
-        Node<T> current = this.top;
+        Node current = this.top;
         while (current != null) {
             result += "->" + current.getData();
             current = current.getNext();
@@ -49,7 +49,7 @@ public class Stack<T> {
 
     public int length() {
         int length = 0;
-        Node<T> current = top;
+        Node current = top;
 
         while (current != null) {
             length++;

@@ -1,17 +1,18 @@
 package code401challenges.utilities;
 
+import code401challenges.stacksandqueues.Node;
 import code401challenges.stacksandqueues.Queue;
 
-public class AnimalShelter<T extends Queue<T>> {
-    public Queue<T> dog;
-    public Queue<T> cat;
+public class AnimalShelter<T extends Queue> {
+    public Queue dog;
+    public Queue cat;
 
     public AnimalShelter() {
-        this.dog = new Queue<>();
-        this.cat = new Queue<>();
+        this.dog = new Queue();
+        this.cat = new Queue();
     }
 
-    public void enqueue(T animal) {
+    public void enqueue(Node animal) {
         if(animal.equals(dog)) {
             this.dog.enqueue(animal);
         }
@@ -21,8 +22,8 @@ public class AnimalShelter<T extends Queue<T>> {
         }
     }
 
-    public Queue<T> dequeue(Queue pref) {
-        T animal;
+    public Node dequeue(Queue pref) {
+        Node animal;
         if (pref.equals(dog)) {
             animal = this.dog.dequeue();
             return animal;

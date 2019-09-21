@@ -12,7 +12,7 @@ public class PseudoQueue<T> {
     }
 
     public void enqueue(T value) {
-        this.stackOne.push(value);
+        this.stackOne.push((Integer) value);
     }
     //if stack2 is empty, then flip enq on to deq. pop and return top of deq stack
     public T dequeue() {
