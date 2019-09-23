@@ -46,6 +46,16 @@
 
 - [Day 1: Code Challenge 31: Repeated Word](./otherReadmes/repeatedWord.md)
 
+- [Day 2: Code Challenge 32: Common Values in Two Binary Trees](./otherReadmes/treeIntersection.md)
+
+- [Day 3: Code Challenge 33: LeftJoin Hashmaps](./otherReadmes/leftJoinHashTable.md)
+
+## week 7
+- [Day 1: Graphs](./otherReadmes/graphs.md)
+
+- [Day 1: Code Challenge 36: Breadth-first : Graph](./otherReadmes/breadthFirst-graph.md)
+
+
 ## Code 301 Challenges
 
 - [Inside their directory](./301-code-challenges)
