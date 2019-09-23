@@ -15,7 +15,7 @@ O(1) space
 
 [Link to tests](../code401challenges/src/test/java/code401challenges/tree/TreeIntersectionTest.java)
 
-![Image of Whiteboard tree intersections](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/treeIntersection.JPG)
+![Image of Whiteboard tree intersections](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/treeIntersection.jpg)
 
 ## Resources
 
