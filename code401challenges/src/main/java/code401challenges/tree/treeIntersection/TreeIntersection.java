@@ -6,7 +6,15 @@ import code401challenges.tree.Tree;
 import java.util.ArrayList;
 
 public class TreeIntersection {
+// ## Resources
 
+// https://www.baeldung.com/java-generics
+
+// https://www.geeksforgeeks.org/print-common-nodes-in-two-binary-search-trees/ 
+
+// ## Collaborators
+
+// Marisha Hoza, Jack Kinne, Melfi Perez, Matt Stuhring
 
     public static ArrayList<String> treeIntersections(Tree<String> tree1, Tree<String> tree2) {
         HashTable<String, Boolean> hashtable = new HashTable<>();
