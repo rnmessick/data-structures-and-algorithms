@@ -1,4 +1,4 @@
-package code401challenges.leftJoin;
+package code401challenges.hashTable.leftJoin;
 
 import java.util.Hashtable;
 

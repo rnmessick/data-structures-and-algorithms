@@ -7,7 +7,7 @@ import java.util.Queue;
 
 public class Tree<T> {
 
-    public static Node root;
+    Node<T> root;
 
 
     public Tree() {
@@ -18,97 +18,105 @@ public class Tree<T> {
         this.root = root;
     }
 
+    public ArrayList<T> preOrder() {
+        return preOrderHelper(this.root, new ArrayList<>());
+    }
 
-    public void preOrder(Node current, ArrayList arrList) {
+    private ArrayList<T> preOrderHelper(Node<T> current, ArrayList<T> arrList) {
         // root first
         arrList.add(current.value);
-        if(current.leftChild != null) {
-            preOrder(current.leftChild, arrList);
+        if (current.leftChild != null) {
+            preOrderHelper(current.leftChild, arrList);
         }
-        if(current.rightChild != null) {
-            preOrder(current.rightChild, arrList);
-        }
-    }
-
-    public ArrayList inOrder(Node node, ArrayList arrList) {
-
-        if(node.leftChild != null) {
-            inOrder(node.leftChild, arrList);
-        }
-
-        arrList.add(node.value);
-
-        if(node.rightChild != null) {
-            inOrder(node.rightChild, arrList);
+        if (current.rightChild != null) {
+            preOrderHelper(current.rightChild, arrList);
         }
         return arrList;
     }
 
-    public ArrayList postOrder(Node node, ArrayList arrList) {
+    public ArrayList<T> inOrder() {
+        return inOrderHelper(this.root, new ArrayList<>());
+    }
 
-        if (node.leftChild != null) {
-            postOrder(node.leftChild, arrList);
+    private ArrayList<T> inOrderHelper(Node<T> current, ArrayList<T> arrList) {
+
+        if (current.leftChild != null) {
+            inOrderHelper(current.leftChild, arrList);
         }
-        if (node.rightChild != null) {
-            postOrder(node.rightChild, arrList);
+
+        arrList.add(current.value);
+
+        if (current.rightChild != null) {
+            inOrderHelper(current.rightChild, arrList);
         }
-        arrList.add(node.value);
+        return arrList;
+    }
+
+    public ArrayList<T> postOrder() {
+        return postOrderHelper(this.root, new ArrayList<>());
+    }
+
+    private ArrayList<T> postOrderHelper(Node<T> current, ArrayList<T> arrList) {
+
+        if (current.leftChild != null) {
+            postOrderHelper(current.leftChild, arrList);
+        }
+        if (current.rightChild != null) {
+            postOrderHelper(current.rightChild, arrList);
+        }
+        arrList.add(current.value);
 
         return arrList;
     }
 
-    public static ArrayList breadthFirstTraversal(Tree<Object> bTree) {
-        if (root == null) {
+    public static ArrayList breadthFirstTraversal(Tree bTree) {
+        if (bTree.root == null) {
             return null;
         }
         ArrayList arrList = new ArrayList();
-        Queue nodes = new LinkedList();
-        nodes.add(root);
+        Queue<Node> nodes = new LinkedList<>();
+        nodes.add(bTree.root);
 
-        while (nodes.isEmpty()) {
-            Node frontNode = (Node) nodes.remove();
-            arrList.add(frontNode);
-            if (frontNode.getLeftChild() != null) {
+        while (!nodes.isEmpty()) {
+            Node frontNode = nodes.remove();
+            arrList.add(frontNode.value);
+            if (frontNode.leftChild != null) {
                 nodes.add(frontNode.leftChild);
             }
-            if (frontNode.getRightChild() != null) {
-                nodes.add(frontNode.getRightChild());
+            if (frontNode.rightChild != null) {
+                nodes.add(frontNode.rightChild);
 
             }
-            arrList.add(frontNode.value);
-
         }
+
         return arrList;
     }
 
-    public T findMaxValue(Node<T> treeNode) {
+    public Integer findMaxValue() {
         //where is the max?
         //solving recursively
-        if (treeNode == null) {
+        if (this.root == null) {
             return null;
+        } else {
+            return findMaxValueHelper(this.root, (Integer) this.root.value);
         }
-         //might be node.value
-        T maxResult = treeNode.value;
-        //might be in the left subtree
-        Node<T> leftChildResult = treeNode.leftChild;
-         //might be in the right subtree
-        Node<T> rightChildResult = treeNode.rightChild;
-
-        //find the max from those three spots
-        if (treeNode.leftChild != null) {
-            maxResult = leftChildResult.value;
-        }
-
-        if (rightChildResult != null) {
-            maxResult = rightChildResult.value;
-        }
-        return  maxResult;
     }
 
+    private Integer findMaxValueHelper(Node<T> treeNode, Integer maxResult) {
 
+    //find the max from those three spots
+        if(treeNode !=null) {
+            if ((Integer) treeNode.value > maxResult) {
+                maxResult = (Integer) treeNode.value;
+            }
+            maxResult = findMaxValueHelper(treeNode.leftChild, maxResult);
+            maxResult = findMaxValueHelper(treeNode.rightChild, maxResult);
+        }
+        return maxResult;
+    }
 
     public Node<T> getRoot() {
-        return root;
+        return this.root;
     }
 
     @Override

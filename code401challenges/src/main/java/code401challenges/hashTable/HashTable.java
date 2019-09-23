@@ -2,7 +2,7 @@ package code401challenges.hashTable;
 
 import java.util.ArrayList;
 
-class HashTable<K, V> {
+public class HashTable<K, V> {
 
     public ArrayList<Node<K, V>> buckeyArray;
 
@@ -62,23 +62,23 @@ class HashTable<K, V> {
         newNode.next = head;
         buckeyArray.set(hashKey, newNode);
 
-       //if load factor goes beyond threshold,
+        //if load factor goes beyond threshold,
         // then we double the hash table size
-       if ((1.0* size)/numBuckets >= .7) {
-           ArrayList<Node<K, V>> temp = buckeyArray;
-           buckeyArray = new ArrayList<>();
-           numBuckets = 2 * numBuckets;
-           size = 0;
-           for ( int i = 0; i < numBuckets; i++) {
-               buckeyArray.add(null);
-           }
-           for ( Node headNode : temp) {
-               while ( headNode != null) {
-                   add(key, value);
-                   headNode = headNode.next;
-               }
-           }
-       }
+        if ((1.0* size)/numBuckets >= .7) {
+            ArrayList<Node<K, V>> temp = buckeyArray;
+            buckeyArray = new ArrayList<>();
+            numBuckets = 2 * numBuckets;
+            size = 0;
+            for ( int i = 0; i < numBuckets; i++) {
+                buckeyArray.add(null);
+            }
+            for ( Node headNode : temp) {
+                while ( headNode != null) {
+                    add(key, value);
+                    headNode = headNode.next;
+                }
+            }
+        }
     }
 
     //getting
@@ -95,9 +95,9 @@ class HashTable<K, V> {
                 return (V) head.value;
             }
             head = head.next;
-            }
-        return null;
         }
+        return null;
+    }
 
     //has()
     public boolean contains(K key) {

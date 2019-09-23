@@ -1,27 +1,28 @@
 package code401challenges.tree;
 
 public class BinarySearchTree extends Tree<Integer> {
+
     public BinarySearchTree() {
         super();
     }
 
-    public BinarySearchTree(int firstValue) {
+    public BinarySearchTree(Node<Integer> current) {
 
-        super(new Node(firstValue, null, null));
+        super(current);
     }
 
     //https://www.baeldung.com/java-binary-tree
-    public boolean contains(int value) {
-        return containsHelper(root, value);
+    public boolean contains(Integer value) {
+        return containsHelper(this.root, value);
     }
 
     // search through for a value by comparing it to the value
     // in the current node, then continue in the left or right depending on the value
-    private boolean containsHelper(Node<Integer> current, int numberToFind) {
+    private boolean containsHelper(Node<Integer> current, Integer numberToFind) {
         if (current == null) {
             return false;
         }
-        if (numberToFind == current.value) {
+        if (numberToFind.equals(current.value)) {
             return true;
         }
         return numberToFind < current.value
@@ -30,24 +31,29 @@ public class BinarySearchTree extends Tree<Integer> {
     }
 
 
-    public void add(int numbertoAdd) {
-
-        this.root = addHelper(this.root, numbertoAdd);
+    public void add(Integer numbertoAdd) {
+        Node<Integer> newNode = new Node<>(numbertoAdd);
+        if (this.root == null) {
+            this.root = newNode;
+        } else {
+            addHelper(this.root, newNode);
+        }
     }
+    private void addHelper(Node<Integer> current, Node<Integer> numberToAdd) {
 
-    public Node<Integer> addHelper(Node<Integer> current, int numberToAdd) {
-        //check if tree is empty, if so add new node
-        if (current == null) {
-            current = new Node(numberToAdd, null, null);
-            return current;
+        if (numberToAdd.value < current.value) {
+            //check if tree is empty, if so add new node
+            if (current.leftChild == null) {
+                current.leftChild = numberToAdd;
+            } else {
+                addHelper(current.leftChild, numberToAdd);
+            }
+        } else if (numberToAdd.value > current.value) {
+            if (current.rightChild == null) {
+                current.rightChild = numberToAdd;
+            } else {
+                addHelper(current.rightChild, numberToAdd);
+            }
         }
-
-        if (numberToAdd < current.value) {
-            current.leftChild = addHelper(current.leftChild, numberToAdd);
-        } else if (numberToAdd > current.value) {
-            current.rightChild = addHelper(current.rightChild, numberToAdd);
-            //value already exists
-        }
-        return current;
     }
 }
