@@ -1,20 +1,29 @@
 package code401challenges.stacksandqueues;
 
-public class Node<T> {
-    T value;
-    Node<T> next;
+public class Node {
 
-    public Node(T value) {
+    int value;
+    Node next;
+
+    public Node(int value) {
         this.value = value;
         this.next = null;
     }
 
-    public Node<T> getNext() {
+    public Node getNext() {
         return this.next;
     }
 
-    public T getData() {
+    public int getData() {
         return this.value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+
+    public void setNext(Node next) {
+        this.next = next;
     }
 
 }

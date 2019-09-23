@@ -30,6 +30,14 @@ public class hashTableTest {
         ht.add("Eric", "Nephew");
         assertEquals("Value should print out as sister", "Sister", ht.get("Robin"));
     }
+
+    @Test
+    public void testHashTable_containsValue() {
+        HashTable<String, String> ht = new HashTable<>();
+        ht.add("Robin", "Sister");
+        ht.add("Eric", "Nephew");
+        assertEquals("Hash Table should contain key and be true", true, ht.contains("Robin"));
+    }
     @Test
     public void testHashTable_searchForKeyAndGetNull() {
         HashTable<String, String> ht = new HashTable<>();

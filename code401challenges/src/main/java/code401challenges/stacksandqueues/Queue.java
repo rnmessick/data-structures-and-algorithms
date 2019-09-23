@@ -1,10 +1,10 @@
 package code401challenges.stacksandqueues;
 
-public class Queue<T> {
-    Node<T> front;
-    Node<T> back;
+public class Queue {
+    Node front;
+    Node back;
 
-    public Queue(Node<T> front, Node<T> back) {
+    public Queue(Node front, Node back) {
         this.front = front;
         this.back = back;
     }
@@ -13,36 +13,35 @@ public class Queue<T> {
 
     }
 
-    public void enqueue(T newValue) {
-        Node<T> newNode = new Node<>(newValue);
+    public void enqueue(Node node) {
         if (front == null) {
-            this.front = newNode;
-            this.back = newNode;
+            this.front = node;
+            this.back = node;
         } else {
-            back.next = newNode;
-            back = newNode;
+            back.setNext(node);
+            back = node;
         }
     }
 
-    public T dequeue() {
-        Node<T> temp = this.front;
-        front = front.next;
+    public Node dequeue() {
+        Node temp = this.front;
+        this.front = front.next;
         temp.next = null;
 
-        return (T) temp;
+        return temp;
     }
 
-    public T peek() {
+    public String peek() {
         if (front == null) {
-            return (T) "FRONT is null. Don't dequeue!";
+            return "FRONT is null. Don't dequeue!";
         } else {
-            return (T) ("Front node is: " + front);
+            return ("Front node is: " + front);
         }
     }
 
     public String toString() {
         String result = "FRONT";
-        Node<T> current = this.front;
+        Node current = this.front;
         while (current != null) {
             result += "<-" + current.getData();
             current = current.getNext();
