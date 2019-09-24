@@ -59,8 +59,8 @@ public class GraphTest {
 
         Vertex<String> nodeA = testGraph.addNode("Baldr");
         Vertex<String> nodeB = testGraph.addNode("Willow");
-        Vertex<String> nodeC =testGraph.addNode("Minerva");
-        Vertex<String> nodeD =testGraph.addNode("Amelia");
+        Vertex<String> nodeC = testGraph.addNode("Minerva");
+        Vertex<String> nodeD = testGraph.addNode("Amelia");
         testGraph.addDirectedEdge(nodeA, nodeB, 10);
         testGraph.addDirectedEdge(nodeB, nodeC, 5);
         testGraph.addDirectedEdge(nodeD, nodeA, 2);

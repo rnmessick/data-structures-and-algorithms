@@ -10,6 +10,7 @@ import java.util.*;
 //        Nick Paro//
 //        Melfi Perez//
 //        Matt Stuhring
+//        Marisha Hoza
 public class Graph<T> {
     public HashMap<Vertex<T>, List<Edge<T>>> adjacencyList;
     int size = 0;
@@ -41,6 +42,32 @@ public class Graph<T> {
 
     }
 
+    // method adapted from https://www.baeldung.com/java-graphs
+    public List<Vertex<T>> breadthFirstSearch(Vertex<T> startingNode) {
+        List<Vertex<T>> bfsOrder = new LinkedList<>();
+        HashSet<Vertex<T>> visited = new HashSet<>();
+        Queue<Vertex<T>> queue = new LinkedList<>();
+
+        //Enqueue the declared start node into the Queue.
+        queue.add(startingNode);
+        visited.add(startingNode);
+
+        //Create a loop that will run while the node still has nodes present.
+        while (!queue.isEmpty()) {
+            Vertex<T> frontNode = queue.remove();
+            bfsOrder.add(frontNode);
+            for (Edge<T> child : this.adjacencyList.get(frontNode)) {
+                //if the dequeued node has unvisited child nodes,
+                //mark the unvisited children as visited and re-insert
+                //them back into the queue.
+                if (!visited.contains(child.getVertex())) {
+                    visited.add(child.getVertex());
+                    queue.add(child.getVertex());
+                }
+            }
+        }
+        return bfsOrder;
+    }
     //    ********getters & setters***********
     public List<Edge<T>> getNeighbors(T value) {
         return adjacencyList.get(new Vertex<>(value));

@@ -9,20 +9,33 @@ Without utilizing any of the built-in methods available to your language, return
 
 ## Approach & Efficiency
 
-## Algorithm
-From Codefellows:
-
-Here is what the algorithm breadth first traversal looks like:
-
-1. Enqueue the declared start node into the Queue.
-2. Create a loop that will run while the node still has nodes present.
-3. Dequeue the first node from the queue
-4. if the Dequeue‘d node has unvisited child nodes, mark the unvisited children as visited and re-insert them back into the queue.
-
 ## Solution
+![Image of Whiteboard: breadth-first-search graph](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/bfsGraph.jpg)
+
+[Link to code](../code401challenges/src/main/java/code401challenges/graphs/Graph.java)
+
+[Link to tests](../code401challenges/src/test/java/code401challenges/graphs/breadthFirst/BreadthFirstTest.java)
+
 
 ## Resources
+
+https://www.baeldung.com/java-graphs
+
+ https://www.geeksforgeeks.org/graph-data-structure-and-algorithms
+
+https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-35/resources/graphs.html/
 
 https://www.youtube.com/watch?v=0u78hx-66Xk
 
 https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/
+
+## Collaborators
+
+Marisha Hoza
+Jack Kinne
+Nick Paro
+Melfi Perez
+Matt Stuhring
+
+
+## Resources
