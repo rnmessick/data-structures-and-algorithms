@@ -10,7 +10,7 @@ Without utilizing any of the built-in methods available to your language, return
 ## Approach & Efficiency
 
 ## Solution
-![Image of Whiteboard: breadth-first-search graph](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/depthFirstGraph.jpg)
+![Image of Whiteboard: breadth-first-search graph](https://github.com/rnmessick/data-structures-and-algorithms/blob/master/assets/depthFirstGraph.JPG)
 
 [Link to code](../code401challenges/src/main/java/code401challenges/graphs/Graph.java)
 
