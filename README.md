@@ -55,6 +55,9 @@
 
 - [Day 1: Code Challenge 36: Breadth-first : Graph](./otherReadmes/breadthFirst-graph.md)
 
+- [Day 2: Code Challenge 37: get-Edge : Graph](./otherReadmes/getEdge-graph.md)
+
+- [Day 3: Code Challenge 38: depth-first : Graph](./otherReadmes/depth-first-graph.md)
 
 ## Code 301 Challenges
 

@@ -21,7 +21,7 @@ Without utilizing any of the built-in methods available to your language, return
 
 https://www.baeldung.com/java-graphs
 
- https://www.geeksforgeeks.org/graph-data-structure-and-algorithms
+https://www.geeksforgeeks.org/graph-data-structure-and-algorithms
 
 https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-35/resources/graphs.html/
 
