@@ -68,6 +68,29 @@ public class Graph<T> {
         }
         return bfsOrder;
     }
+
+    //adapted from baeldung's depth-first search https://www.baeldung.com/java-depth-first-search
+    public HashSet<Vertex<T>> depthFirstSearch(Vertex<T> startingNode) {
+        Stack<Vertex<T>> stack = new Stack();
+        HashSet<Vertex<T>> isVisited = new HashSet<>();
+        //push startingNode into stack
+        stack.push(startingNode);
+        //while stack is not empty
+        while(!stack.isEmpty()) {
+            Vertex<T> current = stack.pop();
+            //mark current node as visited
+            isVisited.add(current);
+            System.out.println("" + current);
+            //traverse and push unvisited adjacent vertices
+            for (Edge<T> edge : this.adjacencyList.get(current)) {
+                if (!isVisited.contains(edge.getVertex()) ){
+                    stack.push(edge.getVertex());
+                }
+            }
+        }
+        return isVisited;
+    }
+
     //    ********getters & setters***********
     public List<Edge<T>> getNeighbors(T value) {
         return adjacencyList.get(new Vertex<>(value));
