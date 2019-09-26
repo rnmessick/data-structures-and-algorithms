@@ -92,17 +92,20 @@ public class Graph<T> {
     }
 
     //    ********getters & setters***********
-    public List<Edge<T>> getNeighbors(T value) {
-        return adjacencyList.get(new Vertex<>(value));
-
+    public List<Edge<T>> getNeighbors(Vertex<T> value) {
+        return this.adjacencyList.get(value);
     }
 
     public List<Vertex<T>> getNodes() {
-        List<Vertex<T>> vertices = new ArrayList<>();
-        for(Vertex<T> vertex : adjacencyList.keySet()){
-            vertices.add(vertex);
+        if ( this. adjacencyList.size() == 0) {
+            return null;
+        } else {
+            List<Vertex<T>> vertices = new ArrayList<>();
+            for (Vertex<T> vertex : adjacencyList.keySet()) {
+                vertices.add(vertex);
+            }
+            return vertices;
         }
-        return vertices;
     }
 
     public int getSize() {
@@ -117,4 +120,5 @@ public class Graph<T> {
     public String toString() {
         return "Adjacency List " + this.adjacencyList;
     }
+
 }
