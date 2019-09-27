@@ -82,25 +82,5 @@ public class GraphTest {
         assertEquals(5, testGraph.getSize());
 
     }
-    //    A graph with only one node and edge can be properly returned
-//    @Test
-//    public void testGraph_returnGraphWithOneNodeAndOneEdge() {
-//        Graph<String> testGraph = new Graph<>();
-//
-//        Vertex<String> nodeA = testGraph.addNode("Baldr");
-//
-//        testGraph.addDirectedEdge(nodeA, nodeA, 5);
-//
-//        assertEquals("{Baldr=[Neighbor: Baldr Weight: 5]}", testGraph.adjacencyList);
-//    }
-//    An empty graph properly returns null
-    // I can't figure out how to make this null only an empty object
-//    @Test
-//    public void testGraph_emptyGraph() {
-//        Graph testGraph = new Graph();
-//
-//        assertEquals("Adjacency List {}", testGraph);
-//
-//    }
 
 }
